@@ -21,6 +21,8 @@
 		B69BFFA3241673A900C77087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69BFFA1241673A900C77087 /* LaunchScreen.storyboard */; };
 		B69BFFAE241673AA00C77087 /* ParkItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69BFFAD241673AA00C77087 /* ParkItTests.swift */; };
 		B69BFFB9241673AA00C77087 /* ParkItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69BFFB8241673AA00C77087 /* ParkItUITests.swift */; };
+		D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF5666241767F7009FA4B7 /* GridUI.swift */; };
+		D3EF566924176A90009FA4B7 /* GridStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */; };
 		B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD9AB2417809E00E443AA /* AccountManagement.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		B69BFFB4241673AA00C77087 /* ParkItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69BFFB8241673AA00C77087 /* ParkItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItUITests.swift; sourceTree = "<group>"; };
 		B69BFFBA241673AA00C77087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3EF5666241767F7009FA4B7 /* GridUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUI.swift; sourceTree = "<group>"; };
+		D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridStoryboard.storyboard; sourceTree = "<group>"; };
 		B6ADD9AB2417809E00E443AA /* AccountManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagement.swift; sourceTree = "<group>"; };
 		BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 		B69BFF95241673A800C77087 /* ParkIt */ = {
 			isa = PBXGroup;
 			children = (
+				D3EF56612417658D009FA4B7 /* ParkingGrid */,
 				375E7BE424177E4900536863 /* Colour */,
 				B660E90824174F1900987ED8 /* Firebase */,
 				B660E90624174D6200987ED8 /* GoogleService-Info.plist */,
@@ -185,6 +190,15 @@
 			);
 			path = ParkItUITests;
 			sourceTree = "<group>";
+		};
+		D3EF56612417658D009FA4B7 /* ParkingGrid */ = {
+			isa = PBXGroup;
+			children = (
+				D3EF5666241767F7009FA4B7 /* GridUI.swift */,
+				D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */,
+			);
+			path = ParkingGrid;
+      sourceTree = "<group>";
 		};
 		B912D4E13DF9EF653A537926 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -309,6 +323,7 @@
 				B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */,
 				B69BFFA0241673A900C77087 /* Assets.xcassets in Resources */,
 				B69BFF9E241673A800C77087 /* Main.storyboard in Resources */,
+				D3EF566924176A90009FA4B7 /* GridStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +456,7 @@
 				375E7BE62417801500536863 /* ColourTheme.swift in Sources */,
 				B660E90A24174F8100987ED8 /* FirebaseRetrieveData.swift in Sources */,
 				B69BFF99241673A800C77087 /* SceneDelegate.swift in Sources */,
+				D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */,
 				B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
