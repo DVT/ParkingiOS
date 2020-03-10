@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bm-Gh-JD4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GridUI-->
+        <scene sceneID="u9K-yE-1Xs">
+            <objects>
+                <viewController storyboardIdentifier="GridUI" modalPresentationStyle="fullScreen" id="4bm-Gh-JD4" customClass="GridUI" customModule="ParkIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MEN-uO-fha">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-If-See">
+                                <rect key="frame" x="20" y="182" width="130" height="670"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WYm-iS-h6J">
+                                        <rect key="frame" x="8" y="8" width="114" height="654"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WYm-iS-h6J" firstAttribute="top" secondItem="9eN-If-See" secondAttribute="topMargin" id="360-z4-dTU"/>
+                                    <constraint firstItem="WYm-iS-h6J" firstAttribute="leading" secondItem="9eN-If-See" secondAttribute="leadingMargin" id="HMJ-yC-daP"/>
+                                    <constraint firstItem="WYm-iS-h6J" firstAttribute="bottom" secondItem="9eN-If-See" secondAttribute="bottomMargin" id="K7w-pL-Vyo"/>
+                                    <constraint firstItem="WYm-iS-h6J" firstAttribute="trailing" secondItem="9eN-If-See" secondAttribute="trailingMargin" id="gMu-Za-isk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84g-4b-im7">
+                                <rect key="frame" x="264" y="182" width="130" height="670"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kq3-ml-q7K">
+                                        <rect key="frame" x="10" y="8" width="112" height="654"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kq3-ml-q7K" firstAttribute="top" secondItem="84g-4b-im7" secondAttribute="topMargin" id="9Dp-iK-Irx"/>
+                                    <constraint firstItem="kq3-ml-q7K" firstAttribute="trailing" secondItem="84g-4b-im7" secondAttribute="trailingMargin" id="bHg-ge-UDh"/>
+                                    <constraint firstItem="kq3-ml-q7K" firstAttribute="leading" secondItem="84g-4b-im7" secondAttribute="leading" constant="10" id="hk3-2w-YRh"/>
+                                    <constraint firstItem="kq3-ml-q7K" firstAttribute="bottom" secondItem="84g-4b-im7" secondAttribute="bottomMargin" id="xfe-eW-MGK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9eN-If-See" firstAttribute="bottom" secondItem="84g-4b-im7" secondAttribute="bottom" id="7Mu-tQ-u1v"/>
+                            <constraint firstItem="9eN-If-See" firstAttribute="leading" secondItem="3OV-iO-6SJ" secondAttribute="leading" constant="20" id="HDp-5J-XiI"/>
+                            <constraint firstItem="84g-4b-im7" firstAttribute="top" secondItem="3OV-iO-6SJ" secondAttribute="top" constant="138" id="V8q-Cf-iCl"/>
+                            <constraint firstItem="3OV-iO-6SJ" firstAttribute="trailing" secondItem="84g-4b-im7" secondAttribute="trailing" constant="20" id="cNo-ke-Lai"/>
+                            <constraint firstItem="9eN-If-See" firstAttribute="top" secondItem="84g-4b-im7" secondAttribute="top" id="fCd-Nh-IXh"/>
+                            <constraint firstItem="84g-4b-im7" firstAttribute="leading" secondItem="MEN-uO-fha" secondAttribute="leading" constant="264" id="gSG-gP-UoQ"/>
+                            <constraint firstAttribute="trailing" secondItem="9eN-If-See" secondAttribute="trailing" constant="264" id="jSt-Ff-gRe"/>
+                            <constraint firstItem="3OV-iO-6SJ" firstAttribute="bottom" secondItem="9eN-If-See" secondAttribute="bottom" constant="10" id="mk1-Uu-eki"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3OV-iO-6SJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="LeftStack" destination="WYm-iS-h6J" id="HiN-VH-3E0"/>
+                        <outlet property="RightStack" destination="kq3-ml-q7K" id="z5F-iW-osn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnE-65-JnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="-3.3482142857142856"/>
+        </scene>
+    </scenes>
+</document>
