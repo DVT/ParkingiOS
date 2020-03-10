@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		375E7BE62417801500536863 /* ColourTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E7BE52417801500536863 /* ColourTheme.swift */; };
+		4125E5EB2417DD07005358C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EA2417DD07005358C2 /* User.swift */; };
+		4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EC2417DD18005358C2 /* ParkingSpot.swift */; };
+		4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EE2417DD36005358C2 /* BankCard.swift */; };
 		558C49BF0D900BCB150AE2D8 /* Pods_ParkItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */; };
 		98E7D4892391BACB33528524 /* Pods_ParkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */; };
 		B65F8EE225D8F9696F8304DC /* Pods_ParkIt_ParkItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */; };
@@ -21,9 +24,9 @@
 		B69BFFA3241673A900C77087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69BFFA1241673A900C77087 /* LaunchScreen.storyboard */; };
 		B69BFFAE241673AA00C77087 /* ParkItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69BFFAD241673AA00C77087 /* ParkItTests.swift */; };
 		B69BFFB9241673AA00C77087 /* ParkItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69BFFB8241673AA00C77087 /* ParkItUITests.swift */; };
+		B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD9AB2417809E00E443AA /* AccountManagement.swift */; };
 		D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF5666241767F7009FA4B7 /* GridUI.swift */; };
 		D3EF566924176A90009FA4B7 /* GridStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */; };
-		B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD9AB2417809E00E443AA /* AccountManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		2472D8B90C0EBEA2914E5F24 /* Pods-ParkIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.release.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.release.xcconfig"; sourceTree = "<group>"; };
 		2FA30719EC3FF63336D5300A /* Pods-ParkItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItTests.release.xcconfig"; path = "Target Support Files/Pods-ParkItTests/Pods-ParkItTests.release.xcconfig"; sourceTree = "<group>"; };
 		375E7BE52417801500536863 /* ColourTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourTheme.swift; sourceTree = "<group>"; };
+		4125E5EA2417DD07005358C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4125E5EC2417DD18005358C2 /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
+		4125E5EE2417DD36005358C2 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 		6C0B24C52C69F79D73A0F932 /* Pods-ParkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt_ParkItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B660E90624174D6200987ED8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -66,11 +72,11 @@
 		B69BFFB4241673AA00C77087 /* ParkItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69BFFB8241673AA00C77087 /* ParkItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItUITests.swift; sourceTree = "<group>"; };
 		B69BFFBA241673AA00C77087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3EF5666241767F7009FA4B7 /* GridUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUI.swift; sourceTree = "<group>"; };
-		D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridStoryboard.storyboard; sourceTree = "<group>"; };
 		B6ADD9AB2417809E00E443AA /* AccountManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagement.swift; sourceTree = "<group>"; };
 		BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3EF5666241767F7009FA4B7 /* GridUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUI.swift; sourceTree = "<group>"; };
+		D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridStoryboard.storyboard; sourceTree = "<group>"; };
 		D9EDB802AB654BDA363BCE5D /* Pods-ParkIt-ParkItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt-ParkItUITests.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt-ParkItUITests/Pods-ParkIt-ParkItUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA040EF650F0376DC2A3D4B7 /* Pods-ParkItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItTests.debug.xcconfig"; path = "Target Support Files/Pods-ParkItTests/Pods-ParkItTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +115,16 @@
 				375E7BE52417801500536863 /* ColourTheme.swift */,
 			);
 			path = Colour;
+			sourceTree = "<group>";
+		};
+		4125E5E92417DCCC005358C2 /* CoreClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4125E5EA2417DD07005358C2 /* User.swift */,
+				4125E5EC2417DD18005358C2 /* ParkingSpot.swift */,
+				4125E5EE2417DD36005358C2 /* BankCard.swift */,
+			);
+			path = CoreClasses;
 			sourceTree = "<group>";
 		};
 		A6F8C5888848B620C61956D3 /* Pods */ = {
@@ -158,6 +174,7 @@
 		B69BFF95241673A800C77087 /* ParkIt */ = {
 			isa = PBXGroup;
 			children = (
+				4125E5E92417DCCC005358C2 /* CoreClasses */,
 				D3EF56612417658D009FA4B7 /* ParkingGrid */,
 				375E7BE424177E4900536863 /* Colour */,
 				B660E90824174F1900987ED8 /* Firebase */,
@@ -191,15 +208,6 @@
 			path = ParkItUITests;
 			sourceTree = "<group>";
 		};
-		D3EF56612417658D009FA4B7 /* ParkingGrid */ = {
-			isa = PBXGroup;
-			children = (
-				D3EF5666241767F7009FA4B7 /* GridUI.swift */,
-				D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */,
-			);
-			path = ParkingGrid;
-      sourceTree = "<group>";
-		};
 		B912D4E13DF9EF653A537926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +216,15 @@
 				BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3EF56612417658D009FA4B7 /* ParkingGrid */ = {
+			isa = PBXGroup;
+			children = (
+				D3EF5666241767F7009FA4B7 /* GridUI.swift */,
+				D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */,
+			);
+			path = ParkingGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,9 +472,12 @@
 				B69BFF97241673A800C77087 /* AppDelegate.swift in Sources */,
 				375E7BE62417801500536863 /* ColourTheme.swift in Sources */,
 				B660E90A24174F8100987ED8 /* FirebaseRetrieveData.swift in Sources */,
+				4125E5EB2417DD07005358C2 /* User.swift in Sources */,
 				B69BFF99241673A800C77087 /* SceneDelegate.swift in Sources */,
 				D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */,
+				4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */,
 				B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */,
+				4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
