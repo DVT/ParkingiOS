@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>216166988450-9nip5d4e8oh4i7ugnf18v16cucjh7ekj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.216166988450-9nip5d4e8oh4i7ugnf18v16cucjh7ekj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAJPwynn9nYV262Rvyixp9pimYmOMpBbWg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>216166988450</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>za.co.dvt.ParkIt</string>
+	<key>PROJECT_ID</key>
+	<string>parkit-6cd47</string>
+	<key>STORAGE_BUCKET</key>
+	<string>parkit-6cd47.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:216166988450:ios:573a436c947d0a0f61f5fb</string>
+	<key>DATABASE_URL</key>
+	<string>https://parkit-6cd47.firebaseio.com</string>
+</dict>
+</plist>
