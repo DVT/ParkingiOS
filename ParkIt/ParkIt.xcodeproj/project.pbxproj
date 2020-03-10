@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		375E7BE62417801500536863 /* ColourTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E7BE52417801500536863 /* ColourTheme.swift */; };
-		419D33EB2417B98D00DBCD30 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D33EA2417B98D00DBCD30 /* File.swift */; };
 		558C49BF0D900BCB150AE2D8 /* Pods_ParkItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */; };
-		5A6334BE2417AC10008995E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334BB2417AC10008995E6 /* User.swift */; };
-		5A6334BF2417AC10008995E6 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334BC2417AC10008995E6 /* BankCard.swift */; };
-		5A6334C02417AC10008995E6 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334BD2417AC10008995E6 /* ParkingSpot.swift */; };
 		98E7D4892391BACB33528524 /* Pods_ParkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */; };
 		B65F8EE225D8F9696F8304DC /* Pods_ParkIt_ParkItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */; };
 		B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B660E90624174D6200987ED8 /* GoogleService-Info.plist */; };
@@ -49,10 +45,6 @@
 		2472D8B90C0EBEA2914E5F24 /* Pods-ParkIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.release.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.release.xcconfig"; sourceTree = "<group>"; };
 		2FA30719EC3FF63336D5300A /* Pods-ParkItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItTests.release.xcconfig"; path = "Target Support Files/Pods-ParkItTests/Pods-ParkItTests.release.xcconfig"; sourceTree = "<group>"; };
 		375E7BE52417801500536863 /* ColourTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourTheme.swift; sourceTree = "<group>"; };
-		5A6334BB2417AC10008995E6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5A6334BC2417AC10008995E6 /* BankCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
-		5A6334BD2417AC10008995E6 /* ParkingSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
-		419D33EA2417B98D00DBCD30 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		6C0B24C52C69F79D73A0F932 /* Pods-ParkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt_ParkItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B660E90624174D6200987ED8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -113,22 +105,6 @@
 			path = Colour;
 			sourceTree = "<group>";
 		};
-		5A6334BA2417AC10008995E6 /* CoreClasses */ = {
-			isa = PBXGroup;
-			children = (
-				5A6334BB2417AC10008995E6 /* User.swift */,
-				5A6334BC2417AC10008995E6 /* BankCard.swift */,
-				5A6334BD2417AC10008995E6 /* ParkingSpot.swift */,
-			);
-			path = CoreClasses;
-		419D33E92417B98200DBCD30 /* Folder */ = {
-			isa = PBXGroup;
-			children = (
-				419D33EA2417B98D00DBCD30 /* File.swift */,
-			);
-			path = Folder;
-			sourceTree = "<group>";
-		};
 		A6F8C5888848B620C61956D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +151,6 @@
 		B69BFF95241673A800C77087 /* ParkIt */ = {
 			isa = PBXGroup;
 			children = (
-				5A6334BA2417AC10008995E6 /* CoreClasses */,
-				419D33E92417B98200DBCD30 /* Folder */,
 				375E7BE424177E4900536863 /* Colour */,
 				B660E90824174F1900987ED8 /* Firebase */,
 				B660E90624174D6200987ED8 /* GoogleService-Info.plist */,
@@ -460,13 +434,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69BFF9B241673A800C77087 /* ViewController.swift in Sources */,
-				419D33EB2417B98D00DBCD30 /* File.swift in Sources */,
 				B69BFF97241673A800C77087 /* AppDelegate.swift in Sources */,
-				5A6334BF2417AC10008995E6 /* BankCard.swift in Sources */,
-				5A6334BE2417AC10008995E6 /* User.swift in Sources */,
 				375E7BE62417801500536863 /* ColourTheme.swift in Sources */,
 				B660E90A24174F8100987ED8 /* FirebaseRetrieveData.swift in Sources */,
-				5A6334C02417AC10008995E6 /* ParkingSpot.swift in Sources */,
 				B69BFF99241673A800C77087 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
