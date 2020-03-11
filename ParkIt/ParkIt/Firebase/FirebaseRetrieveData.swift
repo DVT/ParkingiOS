@@ -24,40 +24,46 @@ class FirebaseRetrieveData {
                 print("\(key) -- \(val1!)")
                 let val: String = String(format: "%@", val1 as! CVarArg)
                 let data = key.components(separatedBy: ":")
-                print(data[2])
-                var parking = ParkingSpot(level: .ground, type: .normal, status: .occupied)
-                if (parkingLevel == "Level0") {
-                    if (data[2] == "N" && val == "1") {
-                        parking = ParkingSpot(level: .ground, type: .normal, status: .occupied)
-                    } else if (data[2] == "D" && val == "1") {
-                        parking = ParkingSpot(level: .ground, type: .disabled , status: .occupied)
-                    } else if (data[2] == "D" && val == "0") {
-                        parking = ParkingSpot(level: .ground, type: .disabled , status: .vacant)
-                    } else if (data[2] == "N" && val == "0") {
-                        parking = ParkingSpot(level: .ground, type: .normal , status: .vacant)
-                    } else if (data[2] == "F" && val == "1") {
-                        parking = ParkingSpot(level: .ground, type: .family , status: .occupied)
-                    } else if (data[2] == "F" && val == "0") {
-                        parking = ParkingSpot(level: .ground, type: .family , status: .vacant)
-                    }
-                } else if parkingLevel == "Level1" {
-                    if (data[2] == "N" && val == "1") {
-                        parking = ParkingSpot(level: .levelOne, type: .normal, status: .occupied)
-                    } else if (data[2] == "D" && val == "1") {
-                        parking = ParkingSpot(level: .levelOne, type: .disabled , status: .occupied)
-                    } else if (data[2] == "D" && val == "0") {
-                        parking = ParkingSpot(level: .levelOne, type: .disabled , status: .vacant)
-                    } else if (data[2] == "N" && val == "0") {
-                        parking = ParkingSpot(level: .levelOne, type: .normal , status: .vacant)
-                    } else if (data[2] == "F" && val == "1") {
-                        parking = ParkingSpot(level: .levelOne, type: .family , status: .occupied)
-                    } else if (data[2] == "F" && val == "0") {
-                        parking = ParkingSpot(level: .levelOne, type: .family , status: .vacant)
-                    }
+
+                let parkingType: ParkingSpotType
+                
+                switch data[2] {
+                case "D":
+                    parkingType = .disabled
+                case "N":
+                    parkingType = .normal
+                case "F":
+                    parkingType = .family
+                default:
+                    parkingType = .normal
                 }
-                self.parkingSpots.append(parking)
+                
+                let parkingSpotLevel: ParkingSpotLevel
+                
+                switch parkingLevel {
+                case "Level0":
+                    parkingSpotLevel = .ground
+                case "Level1":
+                    parkingSpotLevel = .levelOne
+                default:
+                    parkingSpotLevel = .ground
+                }
+                
+                let parkingSpotStatus: ParkingSpotStatus
+                
+                switch val {
+                case "0":
+                    parkingSpotStatus = .vacant
+                case "1":
+                    parkingSpotStatus = .occupied
+                default:
+                    parkingSpotStatus = .occupied
+                }
+                
+                let parkingSpot = ParkingSpot(level: parkingSpotLevel, type: parkingType, status: parkingSpotStatus)
+                
+                self.parkingSpots.append(parkingSpot)
             }
-            //print("Here is the array: \n\(self.parkingSpots)")
             completion(self.parkingSpots)
         }
     }
