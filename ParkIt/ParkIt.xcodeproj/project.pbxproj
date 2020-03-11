@@ -12,6 +12,8 @@
 		4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EC2417DD18005358C2 /* ParkingSpot.swift */; };
 		4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EE2417DD36005358C2 /* BankCard.swift */; };
 		558C49BF0D900BCB150AE2D8 /* Pods_ParkItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */; };
+		5A6334C22418BA31008995E6 /* ParkingDuration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6334C12418BA31008995E6 /* ParkingDuration.storyboard */; };
+		5A6334C42418BE6F008995E6 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334C32418BE6F008995E6 /* CircularProgressView.swift */; };
 		98E7D4892391BACB33528524 /* Pods_ParkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */; };
 		B65F8EE225D8F9696F8304DC /* Pods_ParkIt_ParkItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */; };
 		B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B660E90624174D6200987ED8 /* GoogleService-Info.plist */; };
@@ -54,6 +56,8 @@
 		4125E5EA2417DD07005358C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4125E5EC2417DD18005358C2 /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
 		4125E5EE2417DD36005358C2 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		5A6334C12418BA31008995E6 /* ParkingDuration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParkingDuration.storyboard; sourceTree = "<group>"; };
+		5A6334C32418BE6F008995E6 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		6C0B24C52C69F79D73A0F932 /* Pods-ParkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt_ParkItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B660E90624174D6200987ED8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				B69BFF9F241673A900C77087 /* Assets.xcassets */,
 				B69BFFA1241673A900C77087 /* LaunchScreen.storyboard */,
 				B69BFFA4241673A900C77087 /* Info.plist */,
+				5A6334C12418BA31008995E6 /* ParkingDuration.storyboard */,
+				5A6334C32418BE6F008995E6 /* CircularProgressView.swift */,
 			);
 			path = ParkIt;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				B69BFFA0241673A900C77087 /* Assets.xcassets in Resources */,
 				B69BFF9E241673A800C77087 /* Main.storyboard in Resources */,
 				D3EF566924176A90009FA4B7 /* GridStoryboard.storyboard in Resources */,
+				5A6334C22418BA31008995E6 /* ParkingDuration.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +485,7 @@
 				4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */,
 				B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */,
 				4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */,
+				5A6334C42418BE6F008995E6 /* CircularProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
