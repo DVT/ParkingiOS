@@ -8,58 +8,55 @@
 
 import UIKit
 
-public struct space {
-  public var id: Int
-  public var state: String
-  
-  public init(id: Int, state: String) {
-    self.id = id
-    self.state = state
-  }
-}
-
 class GridUI: UIViewController {
   @IBOutlet weak var LeftStack: UIStackView!
   @IBOutlet weak var RightStack: UIStackView!
-  let numberofspaces = 5
-  var spaces = [space]()
+  var parkingSpaces = [ParkingSpot]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      spaces.append(space(id: 0, state: "reserved"))
-      spaces.append(space(id: 1, state: "open"))
-      spaces.append(space(id: 2, state: "taken"))
-      spaces.append(space(id: 3, state: "taken"))
-      spaces.append(space(id: 4, state: "open"))
-      spaces.append(space(id: 5, state: "taken"))
-      spaces.append(space(id: 6, state: "taken"))
-      spaces.append(space(id: 7, state: "open"))
-      spaces.append(space(id: 8, state: "open"))
-      spaces.append(space(id: 9, state: "reserved"))
-      
-      for spot in spaces {
-        if (spot.id<5) {
-          let iconName = iconselection(state: spot.state)
+//      this will change when the array reccieved
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+ 
+      var counter = 0
+      for spot in parkingSpaces {
+        if (counter<5) {
+          let iconName = selecticontodisplay(spot: spot)
           let image = UIImageView(image: UIImage(named: iconName))
+          if (spot.type == .disabled) {
+            image.backgroundColor = UIColor.brown
+          }
           image.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
            LeftStack.addArrangedSubview(image)
-        } else if (spot.id>4 && spot.id<10) {
-           let iconName = iconselection(state: spot.state)
+        } else if (counter>4 && counter<parkingSpaces.count) {
+           let iconName = selecticontodisplay(spot: spot)
           let image = UIImageView(image: UIImage(named: iconName))
+          if (spot.type == .disabled) {
+//            this is for disables parking spaces.
+            image.backgroundColor = UIColor.brown
+          }
           image.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
           RightStack.addArrangedSubview(image)
         }
+        counter = counter + 1
       }
+      
     }
-  
-  public func iconselection(state: String) -> String {
+  public func selecticontodisplay(spot: ParkingSpot) -> String {
     var icon: String = ""
-    if (state == "reserved") {
-      icon = "reserved_space_icon.jpeg"
-    } else if (state == "open") {
-      icon = "open_space_icon.png"
-    } else if (state == "taken") {
+    if (spot.status == .occupied) {
       icon = "car_icon1.png"
+    } else if(spot.status == .vacant) {
+       icon = "open_space_icon.png"
     }
     return icon
   }
