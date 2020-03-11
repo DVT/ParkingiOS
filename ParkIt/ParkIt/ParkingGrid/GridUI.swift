@@ -22,6 +22,7 @@ class GridUI: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
 //    this line runs the runTimedCode function continuously
+    runTimedCode()
     gameTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
   }
   @objc func runTimedCode() {
@@ -31,6 +32,7 @@ class GridUI: UIViewController {
       DispatchQueue.main.async {
        var counter = 0
         for spot in self.parkingSpaces {
+//          bug for view, empty the stackviews everytime the function is called
           if (counter<(self.parkingSpaces.count/2)) {
                   let iconName = self.selecticontodisplay(spot: spot)
                   let image = UIImageView(image: UIImage(named: iconName))
