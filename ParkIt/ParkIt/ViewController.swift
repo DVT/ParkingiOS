@@ -21,7 +21,16 @@ class ViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
+    //Logging in dummy user
     override func viewDidLoad() {
         super.viewDidLoad()
+        let myAccount = AccountManagement()
+        myAccount.signInUser(email: "brandongouws100@gmail.com", password: "happydays") { (success) in
+            if success {
+                print("User successfully signed in")
+            } else {
+                print("Unsuccessful Sign in")
+            }
+        }
     }
 }
