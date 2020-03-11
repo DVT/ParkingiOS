@@ -13,6 +13,16 @@ class CircularProgressView: UIView {
   private var progressLayer = CAShapeLayer()
   private var trackLayer = CAShapeLayer()
   
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    createCircularPath()
+  }
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    createCircularPath()
+  }
+  
   var progressColor: UIColor = UIColor.white {
     
     didSet {
