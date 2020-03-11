@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
                                         <rect key="frame" x="8" y="8" width="114" height="654"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="PurpleBlue"/>
                                 <constraints>
                                     <constraint firstItem="WYm-iS-h6J" firstAttribute="top" secondItem="9eN-If-See" secondAttribute="topMargin" id="360-z4-dTU"/>
                                     <constraint firstItem="WYm-iS-h6J" firstAttribute="leading" secondItem="9eN-If-See" secondAttribute="leadingMargin" id="HMJ-yC-daP"/>
@@ -37,7 +38,7 @@
                                         <rect key="frame" x="10" y="8" width="112" height="654"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="PurpleBlue"/>
                                 <constraints>
                                     <constraint firstItem="kq3-ml-q7K" firstAttribute="top" secondItem="84g-4b-im7" secondAttribute="topMargin" id="9Dp-iK-Irx"/>
                                     <constraint firstItem="kq3-ml-q7K" firstAttribute="trailing" secondItem="84g-4b-im7" secondAttribute="trailingMargin" id="bHg-ge-UDh"/>
@@ -46,7 +47,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Purplish"/>
                         <constraints>
                             <constraint firstItem="9eN-If-See" firstAttribute="bottom" secondItem="84g-4b-im7" secondAttribute="bottom" id="7Mu-tQ-u1v"/>
                             <constraint firstItem="9eN-If-See" firstAttribute="leading" secondItem="3OV-iO-6SJ" secondAttribute="leading" constant="20" id="HDp-5J-XiI"/>
@@ -69,4 +70,12 @@
             <point key="canvasLocation" x="102.89855072463769" y="-3.3482142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="PurpleBlue">
+            <color red="0.50300002098083496" green="0.29199999570846558" blue="0.8619999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purplish">
+            <color red="0.7070000171661377" green="0.56699997186660767" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
