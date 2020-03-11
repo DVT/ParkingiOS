@@ -12,11 +12,13 @@ class BankCard {
   var cardNumber: String
   var csvNumber: String
   var expiryDate: String
+    var cardCash: Int
   
-  init(cardNumber: String, csvNumber: String, expiryDate: String) {
+    init(cardNumber: String, csvNumber: String, expiryDate: String, cardCash: Int) {
     self.cardNumber = cardNumber
     self.csvNumber = csvNumber
     self.expiryDate = expiryDate
+    self.cardCash = cardCash
   }
   
 }
