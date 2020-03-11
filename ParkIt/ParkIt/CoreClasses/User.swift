@@ -20,7 +20,7 @@ class User {
     self.firstName = firstName
     self.lastName = lastName
     self.bankCard = bankCard
-    
+
   }
   
 }
