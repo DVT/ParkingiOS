@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		375E7BE62417801500536863 /* ColourTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E7BE52417801500536863 /* ColourTheme.swift */; };
+		38C806282418B11000578FCA /* PaymentPayScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C806272418B11000578FCA /* PaymentPayScreenView.swift */; };
 		4125E5EB2417DD07005358C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EA2417DD07005358C2 /* User.swift */; };
 		4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EC2417DD18005358C2 /* ParkingSpot.swift */; };
 		4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EE2417DD36005358C2 /* BankCard.swift */; };
@@ -53,6 +54,7 @@
 		2472D8B90C0EBEA2914E5F24 /* Pods-ParkIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.release.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.release.xcconfig"; sourceTree = "<group>"; };
 		2FA30719EC3FF63336D5300A /* Pods-ParkItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItTests.release.xcconfig"; path = "Target Support Files/Pods-ParkItTests/Pods-ParkItTests.release.xcconfig"; sourceTree = "<group>"; };
 		375E7BE52417801500536863 /* ColourTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourTheme.swift; sourceTree = "<group>"; };
+		38C806272418B11000578FCA /* PaymentPayScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPayScreenView.swift; sourceTree = "<group>"; };
 		4125E5EA2417DD07005358C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4125E5EC2417DD18005358C2 /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
 		4125E5EE2417DD36005358C2 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				B69BFFA4241673A900C77087 /* Info.plist */,
 				41D50DD32418B93D008D50D6 /* WelcomeBoard.storyboard */,
 				41D50DD52418C13B008D50D6 /* WelcomeViewController.swift */,
+    38C806272418B11000578FCA /* PaymentPayScreenView.swift */,
 			);
 			path = ParkIt;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69BFF9B241673A800C77087 /* ViewController.swift in Sources */,
+				38C806282418B11000578FCA /* PaymentPayScreenView.swift in Sources */,
 				B69BFF97241673A800C77087 /* AppDelegate.swift in Sources */,
 				41D50DD62418C13B008D50D6 /* WelcomeViewController.swift in Sources */,
 				375E7BE62417801500536863 /* ColourTheme.swift in Sources */,
