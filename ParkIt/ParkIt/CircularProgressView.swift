@@ -8,10 +8,12 @@
 
 import UIKit
 
-class CircularProgressView: UIView {
+class CircularProgressView: UIView, CAAnimationDelegate {
   
   private var progressLayer = CAShapeLayer()
   private var trackLayer = CAShapeLayer()
+  private(set) var currentProgress: Float = 0.0
+  var resetWhenDone = false
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -55,19 +57,94 @@ class CircularProgressView: UIView {
                                   endAngle: endAngle,
                                   clockwise: true)
     
+    setUpTrackLayer(with: circlePath)
+    setUpProgressLayer(with: circlePath)
+    
+  }
+  
+  private func setUpTrackLayer(with circlePath: UIBezierPath) {
+    
     trackLayer.path = circlePath.cgPath
     trackLayer.fillColor = UIColor.clear.cgColor
     trackLayer.strokeColor = trackColor.cgColor
-    trackLayer.lineWidth = 10.0
+    trackLayer.lineWidth = 15.0
     trackLayer.strokeEnd = 1.0
-    layer.addSublayer(trackLayer)
+    self.layer.addSublayer(trackLayer)
+    
+  }
+  
+  private func setUpProgressLayer(with circlePath: UIBezierPath) {
     
     progressLayer.path = circlePath.cgPath
     progressLayer.fillColor = UIColor.clear.cgColor
     progressLayer.strokeColor = progressColor.cgColor
-    progressLayer.lineWidth = 10.0
+    progressLayer.lineWidth = 15.0
     progressLayer.strokeEnd = 0.0
-    layer.addSublayer(progressLayer)
+    self.layer.addSublayer(progressLayer)
+    
+  }
+  
+  private func checkIfCanReset() {
+    
+    if (resetWhenDone) && (currentProgress >= 1) {
+      resetProgressToZero()
+    }
+    
+  }
+  
+  func setProgressWithAnimation(duration: TimeInterval, value: Float) {
+    
+    currentProgress = value
+    
+    CATransaction.begin()
+    CATransaction.setCompletionBlock({ [weak self] in
+      self?.checkIfCanReset()
+    })
+    
+    let animation = CABasicAnimation (keyPath: "strokeEnd")
+    animation.duration = duration - 0.05
+    animation.fromValue = 0.0
+    animation.toValue = currentProgress
+    animation.timingFunction = CAMediaTimingFunction (name: .linear)
+    
+    progressLayer.strokeEnd = CGFloat(currentProgress)
+    progressLayer.add(animation, forKey: "animate_progress")
+    
+    CATransaction.commit()
+    
+  }
+  
+  func resetProgressToZero() {
+    currentProgress = 0
+    
+    let animation = CABasicAnimation (keyPath: "strokeEnd")
+    animation.duration = 0
+    animation.fromValue = 0
+    animation.toValue = 0
+    animation.timingFunction = CAMediaTimingFunction (name: .default)
+    
+    progressLayer.strokeEnd = CGFloat(currentProgress)
+    progressLayer.add(animation, forKey: "animate_reset")
+  }
+  
+  func addToProgress(add value: Float, duration: TimeInterval) {
+    
+    CATransaction.begin()
+    CATransaction.setCompletionBlock({ [weak self] in
+      self?.checkIfCanReset()
+    })
+    
+    let animation = CABasicAnimation (keyPath: "strokeEnd")
+    animation.duration = duration - 0.05
+    animation.fromValue = currentProgress
+    currentProgress += value
+    animation.toValue = currentProgress
+    animation.timingFunction = CAMediaTimingFunction (name: .linear)
+    
+    progressLayer.strokeEnd = CGFloat(currentProgress)
+    progressLayer.add(animation, forKey: "animate_add_progress")
+    
+    CATransaction.commit()
     
   }
   

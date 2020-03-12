@@ -13,12 +13,29 @@ class ParkingDurationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      let circularView = CircularProgressView(frame: CGRect(x: 10.0, y: 10.0, width: 100.0, height: 100.0))
-      circularView.trackColor = .red
-      circularView.progressColor = .blue
+      let circularView = CircularProgressView(frame: CGRect(x: 10.0, y: 10.0, width: 250.0, height: 250.0))
+      circularView.trackColor = ColourTheme.Palette.primaryPurple ?? .red
+      circularView.progressColor = ColourTheme.Palette.secondaryPurple ?? .blue
       
       self.view.addSubview(circularView)
       
+      circularView.center = self.view.center
+      circularView.resetWhenDone = true
+      
+      var runCount = 0
+      
+      let _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        
+        circularView.addToProgress(add: (1/60), duration: 1.0)
+        
+        runCount += 1
+        
+        if runCount >= 120 {
+          timer.invalidate()
+        }
+        
+      }
+      
     }
-    
+  
 }
