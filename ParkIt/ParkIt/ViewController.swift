@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as UIViewController
         present(vc, animated: true, completion: nil)
     }
+    @IBAction func dashboardButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "DashboardStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC") as UIViewController
+        present(vc, animated: true, completion: nil)
+    }
     
     //Logging in dummy user
     @IBOutlet weak var lblVacant: UILabel!
