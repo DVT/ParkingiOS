@@ -15,6 +15,13 @@ extension UIStackView {
         let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
             self.removeArrangedSubview(subview)
             return allSubviews + [subview]
+extension ParkingSpot {
+    var levelView: Int {
+        get {
+            switch level{
+            case .ground: return 0
+            case .levelOne: return 1
+            }
         }
         
         // Deactivate all constraints
@@ -25,14 +32,67 @@ extension UIStackView {
     }
 }
 
+
 class GridUI: UIViewController {
   @IBOutlet weak var LeftStack: UIStackView!
   @IBOutlet weak var RightStack: UIStackView!
   var parkingSpaces = [ParkingSpot]()
   var parkTimer: Timer?
+    
+    var imageArray: [UIImageView] = []
+    
+    private func prepareImageStacks() {
+            imageArray.append(imge0)
+            imageArray.append(imge1)
+            imageArray.append(imge2)
+            imageArray.append(imge3)
+            imageArray.append(imge4)
+            imageArray.append(imge5)
+            imageArray.append(imge6)
+            imageArray.append(imge7)
+            imageArray.append(imge8)
+            imageArray.append(imge9)
+    }
+        
+    @IBOutlet weak var imge9: UIImageView!
+    @IBOutlet weak var imge8: UIImageView!
+    @IBOutlet weak var imge7: UIImageView!
+    @IBOutlet weak var imge6: UIImageView!
+    @IBOutlet weak var imge5: UIImageView!
+    @IBOutlet weak var imge0: UIImageView!
+    @IBOutlet weak var imge1: UIImageView!
+    @IBOutlet weak var imge2: UIImageView!
+    @IBOutlet weak var imge3: UIImageView!
+    @IBOutlet weak var imge4: UIImageView!
+    var parkingSpaces = [ParkingSpot]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        _ = self.view
+        prepareImageStacks()
+//      this will change when the array reccieved
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+
+        for (index, parkingSpot) in parkingSpaces.enumerated() {
+            switch parkingSpot.type {
+                case .disabled: //imageArray[index].backgroundColor = .systemYellow
+                imageArray[index].image = UIImage(named: "disabled_icon.png")
+                case .normal: imageArray[index].backgroundColor = .none
+                case .family: imageArray[index].backgroundColor = .systemGreen
+            }
+            switch parkingSpot.status {
+                case .occupied: imageArray[index].image = UIImage(named: index < 5 ? "car_icon1.png" : "car_icon2.png")
+                case .vacant: imageArray[index].image = imageArray[index].image
+            }
     }
   override func viewDidAppear(_ animated: Bool) {
     //    this line runs the runTimedCode function continuously
@@ -69,19 +129,5 @@ class GridUI: UIViewController {
           counter = counter + 1
           print(counter)
         }
-      }
     }
-  }
-//  WE WILL NEED TO DEINITIALISE THE TIMER WHEN WE MOVE TO ANOTHER AREA WITH: gameTimer?.invalidate()
-
-  public func selecticontodisplay(spot: ParkingSpot) -> String {
-    var icon: String = ""
-    if (spot.status == .occupied) {
-      icon = "car_icon1.png"
-    } else if(spot.status == .vacant) {
-       icon = "open_space_icon.png"
-    }
-    return icon
-  }
-
 }
