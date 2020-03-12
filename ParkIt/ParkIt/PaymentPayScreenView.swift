@@ -17,13 +17,53 @@ class PaymentPayScreenView: UIViewController {
     @IBOutlet weak var lblPriceTotal: UILabel!
     @IBOutlet weak var lblCardNum: UILabel!
     @IBOutlet weak var lblLicensePlate: UILabel!
+    @IBOutlet weak var btnConfirm: UIButton!
+    @IBOutlet weak var lblDetails: UILabel!
+    @IBOutlet weak var stackLicensePlate: UIStackView!
+    @IBOutlet weak var stackCardNumber: UIStackView!
+    @IBOutlet weak var lblQRCodeToExit: UILabel!
+    @IBOutlet weak var lblQRCode: UILabel!
+    
+    var hour: Int?
+    var rate: Double?
+    
+    
+    @IBAction func btnConfirmPress(_ sender: Any) {
+
+       lblQRCodeToExit.isEnabled = true
+       lblQRCodeToExit.isHidden = false
+       lblQRCode.isEnabled = true
+       lblQRCode.isHidden = false
+        
+       lblQRCode.text  = randomString(length: 8)
+       sleep(2)
+       displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
+        
+    }
     
     @IBAction func btnMakePayment(_ sender: UIButton) {
-    displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
+        btnConfirm.isHidden = false
+        btnConfirm.isEnabled = true
+        lblDetails.isEnabled = true
+        lblDetails.isHidden = false
+        stackLicensePlate.isHidden = false
+        stackCardNumber.isHidden = false
+
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnConfirm.isEnabled = false
+        btnConfirm.isHidden = true
+        lblDetails.isEnabled = false
+        lblDetails.isHidden = true
+        stackLicensePlate.isHidden = true
+        stackCardNumber.isHidden = true
+        lblQRCodeToExit.isEnabled = false
+        lblQRCodeToExit.isHidden = true
+        lblQRCode.isEnabled = false
+        lblQRCode.isHidden = true
         var accountObj = AccountManagement()
         accountObj.signInUser(email: "brandongouws100@gmail.com", password: "happydays") { (success) in
             if success {
@@ -33,21 +73,26 @@ class PaymentPayScreenView: UIViewController {
                     let name = user.bankCard.cardNumber
                     let conditionIndex = name.count - 3
                     let maskedName = String(name.enumerated().map { (index, element) -> Character in
-                        return index < conditionIndex ? "x" : element
+                        return index < conditionIndex ? "#" : element
                     })
                     print("Masked Name: ", maskedName)//testing
                     
                      var fullname = "\(user.firstName)  \(user.lastName)"
                      self.lblCustomerName.text = fullname
-                    self.lblParkingNum.text = ""
-                    self.lblHourlyRate.text = "15"
-                    self.lblDuration.text = "15"
+                    self.lblParkingNum.text = String(self.randomParkingNumber(length: 10))
+                    self.lblHourlyRate.text = "\(self.rate ?? 0.0)"
+                    self.lblDuration.text = "\(self.hour ?? 0)"
+                    self.lblLicensePlate.text = user.licensePlateNum
+                    self.lblCardNum.text = maskedName
                     let hourRate = Int(self.lblHourlyRate.text ?? "0")
                     let duration = Int(self.lblDuration.text ?? "0")
                     
-                    self.lblPriceTotal.text = String(hourRate!*duration!)
-                    self.lblLicensePlate.text = user.licensePlateNum
-                    self.lblCardNum.text = maskedName
+                    guard let hour = self.hour, let rate = self.rate else {
+                        return
+                    }
+                    
+                    self.lblPriceTotal.text = "\(Double(hour) * rate)"
+
                      
                      
                  }
@@ -67,7 +112,15 @@ class PaymentPayScreenView: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    func randomParkingNumber(length: Int) -> String {
+      let letters = "0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
     
     
     
