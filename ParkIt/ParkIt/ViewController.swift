@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     present(vc, animated: true, completion: nil)
   }
   
+    @IBAction func btnPaymentScreen(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentPayScreenView") as UIViewController
+        present(vc, animated: true, completion: nil)
+    }
     @IBAction func btn_WelcomeScreen(_ sender: Any) {
         let storyboard = UIStoryboard(name: "WelcomeBoard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as UIViewController

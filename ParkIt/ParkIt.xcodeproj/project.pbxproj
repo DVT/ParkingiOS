@@ -10,6 +10,7 @@
 		375E7BE62417801500536863 /* ColourTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E7BE52417801500536863 /* ColourTheme.swift */; };
 		377A973A241921CA00216C32 /* DashboardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377A9739241921CA00216C32 /* DashboardStoryboard.storyboard */; };
 		377A973C241921F700216C32 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A973B241921F700216C32 /* DashboardViewController.swift */; };
+		385D2AA2241A2B6D0004FAE9 /* PaymentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385D2AA1241A2B6D0004FAE9 /* PaymentStoryboard.storyboard */; };
 		38C806282418B11000578FCA /* PaymentPayScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C806272418B11000578FCA /* PaymentPayScreenView.swift */; };
 		4125E5EB2417DD07005358C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EA2417DD07005358C2 /* User.swift */; };
 		4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EC2417DD18005358C2 /* ParkingSpot.swift */; };
@@ -58,6 +59,7 @@
 		375E7BE52417801500536863 /* ColourTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourTheme.swift; sourceTree = "<group>"; };
 		377A9739241921CA00216C32 /* DashboardStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardStoryboard.storyboard; sourceTree = "<group>"; };
 		377A973B241921F700216C32 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		385D2AA1241A2B6D0004FAE9 /* PaymentStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentStoryboard.storyboard; sourceTree = "<group>"; };
 		38C806272418B11000578FCA /* PaymentPayScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPayScreenView.swift; sourceTree = "<group>"; };
 		4125E5EA2417DD07005358C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4125E5EC2417DD18005358C2 /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				38C806272418B11000578FCA /* PaymentPayScreenView.swift */,
 				377A9739241921CA00216C32 /* DashboardStoryboard.storyboard */,
 				377A973B241921F700216C32 /* DashboardViewController.swift */,
+				385D2AA1241A2B6D0004FAE9 /* PaymentStoryboard.storyboard */,
 			);
 			path = ParkIt;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				B69BFFA3241673A900C77087 /* LaunchScreen.storyboard in Resources */,
 				B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */,
+				385D2AA2241A2B6D0004FAE9 /* PaymentStoryboard.storyboard in Resources */,
 				B69BFFA0241673A900C77087 /* Assets.xcassets in Resources */,
 				377A973A241921CA00216C32 /* DashboardStoryboard.storyboard in Resources */,
 				B69BFF9E241673A800C77087 /* Main.storyboard in Resources */,
