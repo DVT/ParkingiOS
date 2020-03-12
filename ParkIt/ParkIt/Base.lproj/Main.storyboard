@@ -39,14 +39,6 @@
                                     <action selector="dashboardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zz-yM-qLM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meK-vj-xEG">
-                                <rect key="frame" x="159" y="701" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Parking Duration"/>
-                                <connections>
-                                    <action selector="btnParkingDuration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NDQ-1G-HoS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wB-O0-dtt">
                                 <rect key="frame" x="177" y="810" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
