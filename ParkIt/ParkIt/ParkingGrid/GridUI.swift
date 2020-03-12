@@ -72,6 +72,7 @@ class GridUI: UIViewController {
                 case .disabled: //imageArray[index].backgroundColor = .systemYellow
                 imageArray[index].image = UIImage(named: "disabled_icon.png")
                 case .normal: imageArray[index].backgroundColor = .none
+                case .family: imageArray[index].backgroundColor = .systemGreen
             }
             switch parkingSpot.status {
                 case .occupied: imageArray[index].image = UIImage(named: index < 5 ? "car_icon1.png" : "car_icon2.png")
