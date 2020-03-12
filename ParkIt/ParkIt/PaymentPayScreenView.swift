@@ -52,7 +52,7 @@ class PaymentPayScreenView: UIViewController {
     }
     
     func GetBankObj(cardnumber: String, csvnumber: String, expirydate: String){
-        _ = BankCard.init(cardNumber: cardnumber, csvNumber: csvnumber, expiryDate: expirydate, cardCash: 100)
+        _ = BankCard.init(cardNumber: cardnumber, csvNumber: csvnumber, expiryDate: expirydate)
     }
    
     

@@ -20,9 +20,22 @@ class ViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as UIViewController
         present(vc, animated: true, completion: nil)
     }
+    @IBAction func dashboardButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "DashboardStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC") as UIViewController
+        present(vc, animated: true, completion: nil)
+    }
     
+    //Logging in dummy user
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let myAccount = AccountManagement()
+        myAccount.signInUser(email: "brandongouws100@gmail.com", password: "happydays") { (success) in
+            if success {
+                print("User successfully signed in")
+            } else {
+                print("Unsuccessful Sign in")
+            }
+        }
     }
 }

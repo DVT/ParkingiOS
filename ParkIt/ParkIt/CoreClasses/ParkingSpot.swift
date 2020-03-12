@@ -8,22 +8,23 @@
 import Foundation
 
 enum ParkingSpotLevel: String {
-  case ground = "Ground"
-  case levelOne = "Level One"
+    case ground = "Ground"
+    case levelOne = "Level One"
 }
 
 enum ParkingSpotType: String {
-  case normal = "Nomral Parking"
-  case disabled = "Disabled Parkling"
+    case normal = "Nomral Parking"
+    case disabled = "Disabled Parking"
+    case family = "Family Parking"
 }
 
 enum ParkingSpotStatus: String {
-  case occupied = "Occupied"
-  case vacant = "Vacant"
+    case occupied = "Occupied"
+    case vacant = "Vacant"
 }
 
 struct ParkingSpot {
-  var level: ParkingSpotLevel
-  var type: ParkingSpotType
-  var status: ParkingSpotStatus
+    var level: ParkingSpotLevel
+    var type: ParkingSpotType
+    var status: ParkingSpotStatus
 }

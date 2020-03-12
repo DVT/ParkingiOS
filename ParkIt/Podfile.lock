@@ -1,4 +1,5 @@
 PODS:
+  - DropDown (2.3.13)
   - Firebase/Auth (6.19.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.4.3)
@@ -57,11 +58,13 @@ PODS:
   - nanopb/encode (0.3.9011)
 
 DEPENDENCIES:
+  - DropDown
   - Firebase/Auth
   - Firebase/Database
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -77,6 +80,7 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Firebase: d55ddb0e0bb3207166cddc028647833d8a1b5b6f
   FirebaseAuth: 5ce2b03a3d7fe56b7a6e4c5ec7ff1522890b1d6f
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
@@ -91,6 +95,6 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: 08441e2c8e01dc84f2ad96c46e4520a8c1dfd8b2
+PODFILE CHECKSUM: 4b2771426a6a9c50e574e939742d210a44537192
 
 COCOAPODS: 1.8.4
