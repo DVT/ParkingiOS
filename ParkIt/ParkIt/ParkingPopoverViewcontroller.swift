@@ -17,6 +17,8 @@ class ParkingPopoverViewController : UIViewController {
   @IBOutlet weak var PShopsLabel: UILabel!
   
   
-  
+  override func viewDidLoad() {
+      super.viewDidLoad()
+  }
   
 }
