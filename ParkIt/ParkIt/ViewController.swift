@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
   @IBAction func Park(_ sender: UIButton) {
@@ -14,7 +15,6 @@ class ViewController: UIViewController {
     let vc = storyboard.instantiateViewController(withIdentifier: "GridUI") as UIViewController
     present(vc, animated: true, completion: nil)
   }
-  
     @IBAction func btn_WelcomeScreen(_ sender: Any) {
         let storyboard = UIStoryboard(name: "WelcomeBoard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as UIViewController
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
     
     //Logging in dummy user
+    @IBOutlet weak var lblVacant: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         let myAccount = AccountManagement()
