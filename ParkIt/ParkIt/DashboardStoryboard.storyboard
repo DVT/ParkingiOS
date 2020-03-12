@@ -46,6 +46,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbj-xd-EDU"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="lVS-5m-R2b" id="SG5-Va-Mpo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhD-eZ-ZTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
