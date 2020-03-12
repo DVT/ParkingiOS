@@ -28,7 +28,10 @@
                                     <constraint firstAttribute="width" constant="80" id="DOh-bN-iZe"/>
                                     <constraint firstAttribute="height" constant="71" id="hCp-lc-EEc"/>
                                 </constraints>
-                                <state key="normal" title="7" backgroundImage="locationButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="7" backgroundImage="locationButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="locationButtonTapped:" destination="uc2-Lz-ccL" eventType="touchUpInside" id="8SJ-XX-k7Z"/>
                                 </connections>
@@ -50,6 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="qbj-xd-EDU"/>
                     </view>
                     <connections>
+                        <outlet property="locationButton" destination="3uW-3p-QFv" id="6ra-wA-uif"/>
                         <outlet property="searchBar" destination="lVS-5m-R2b" id="SG5-Va-Mpo"/>
                     </connections>
                 </viewController>
@@ -59,7 +63,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="locationButton" width="512" height="512"/>
+        <image name="locationButton" width="321" height="500"/>
         <image name="map" width="886" height="886"/>
     </resources>
 </document>

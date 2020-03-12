@@ -10,51 +10,56 @@ import UIKit
 
 class PaymentPayScreenView: UIViewController {
 
-    @IBOutlet weak var txtCardNumber: UITextField!
+    @IBOutlet weak var lblCustomerName: UILabel!
+    @IBOutlet weak var lblParkingNum: UILabel!
+    @IBOutlet weak var lblHourlyRate: UILabel!
+    @IBOutlet weak var lblDuration: UILabel!
+    @IBOutlet weak var lblPriceTotal: UILabel!
+    @IBOutlet weak var lblCardNum: UILabel!
+    @IBOutlet weak var lblLicensePlate: UILabel!
     
-    @IBOutlet weak var txtCSVNumber: UITextField!
-    
-    @IBOutlet weak var lblPriceAmount: UILabel!
-    @IBOutlet weak var txtExpiryDate: UITextField!
-    @IBOutlet weak var lblTimeValue: UILabel!
-
-    @IBAction func timeStepper(_ sender: UIStepper) {
-        lblTimeValue.text = String(sender.value)
-        
-        switch lblTimeValue.text {
-        case "0.0":
-            lblPriceAmount.text = "R0.00"
-        case "1.0":
-            lblPriceAmount.text = "R15.00"
-        case "2.0":
-            lblPriceAmount.text = "R35.00"
-        case "3.0":
-            lblPriceAmount.text = "R60.00"
-        default:
-            lblPriceAmount.text = "R0.00"
-            
-        }
-
-    }
-    
-    @IBAction func btnReserve(_ sender: Any) {
-        //var bankCardObj = GetBankObj(cardnumber: <#T##String#>, csvnumber: <#T##String#>, expirydate: <#T##String#>)
-        displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
-        
+    @IBAction func btnMakePayment(_ sender: UIButton) {
+    displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        GetBankObj(cardnumber: txtCardNumber.text ?? "Empty", csvnumber: txtCSVNumber.text ?? "Empty", expirydate: txtExpiryDate.text ?? "Empty")
-        
+        var accountObj = AccountManagement()
+        accountObj.signInUser(email: "brandongouws100@gmail.com", password: "happydays") { (success) in
+            if success {
+                print("User successfully signed in")
+                accountObj.getUser { (success, user) in
+                    
+                    let name = user.bankCard.cardNumber
+                    let conditionIndex = name.count - 3
+                    let maskedName = String(name.enumerated().map { (index, element) -> Character in
+                        return index < conditionIndex ? "x" : element
+                    })
+                    print("Masked Name: ", maskedName)//testing
+                    
+                     var fullname = "\(user.firstName)  \(user.lastName)"
+                     self.lblCustomerName.text = fullname
+                    self.lblParkingNum.text = ""
+                    self.lblHourlyRate.text = "15"
+                    self.lblDuration.text = "15"
+                    let hourRate = Int(self.lblHourlyRate.text ?? "0")
+                    let duration = Int(self.lblDuration.text ?? "0")
+                    
+                    self.lblPriceTotal.text = String(hourRate!*duration!)
+                    self.lblLicensePlate.text = user.licensePlateNum
+                    self.lblCardNum.text = maskedName
+                     
+                     
+                 }
+            } else {
+                print("Unsuccessful Sign in")
+            }
+        }
+ 
+
     }
     
-    func GetBankObj(cardnumber: String, csvnumber: String, expirydate: String){
-        _ = BankCard.init(cardNumber: cardnumber, csvNumber: csvnumber, expiryDate: expirydate)
-    }
-   
+
     
     func displayDefaultAlert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
