@@ -8,13 +8,6 @@
 
 import UIKit
 
-extension UIStackView {
-    
-    func removeAllArrangedSubviews() {
-        
-        let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
-            self.removeArrangedSubview(subview)
-            return allSubviews + [subview]
 extension ParkingSpot {
     var levelView: Int {
         get {
@@ -23,13 +16,7 @@ extension ParkingSpot {
             case .levelOne: return 1
             }
         }
-        
-        // Deactivate all constraints
-        NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
-        
-        // Remove the views from self
-        removedSubviews.forEach({ $0.removeFromSuperview() })
-    }
+}
 }
 
 
@@ -64,36 +51,25 @@ class GridUI: UIViewController {
     @IBOutlet weak var imge2: UIImageView!
     @IBOutlet weak var imge3: UIImageView!
     @IBOutlet weak var imge4: UIImageView!
-    var parkingSpaces = [ParkingSpot]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
         _ = self.view
-        prepareImageStacks()
+      prepareImageStacks()
+      
+  }
 //      this will change when the array reccieved
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .occupied))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
-      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .occupied))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
+//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
 
-        for (index, parkingSpot) in parkingSpaces.enumerated() {
-            switch parkingSpot.type {
-                case .disabled: //imageArray[index].backgroundColor = .systemYellow
-                imageArray[index].image = UIImage(named: "disabled_icon.png")
-                case .normal: imageArray[index].backgroundColor = .none
-                case .family: imageArray[index].backgroundColor = .systemGreen
-            }
-            switch parkingSpot.status {
-                case .occupied: imageArray[index].image = UIImage(named: index < 5 ? "car_icon1.png" : "car_icon2.png")
-                case .vacant: imageArray[index].image = imageArray[index].image
-            }
-    }
   override func viewDidAppear(_ animated: Bool) {
     //    this line runs the runTimedCode function continuously
     runTimedCode()
@@ -105,29 +81,22 @@ class GridUI: UIViewController {
       myFire.getData(parkingLevel: "Level0") { (parking) in
       self.parkingSpaces = parking
         DispatchQueue.main.async {
-           var counter = 0
-        for spot in self.parkingSpaces {
-//          bug for view, empty the stackviews everytime the function is called
-          if counter < 2 {
-                  let iconName = self.selecticontodisplay(spot: spot)
-                  let image = UIImageView(image: UIImage(named: iconName))
-                  if (spot.type == .disabled) {
-                    image.backgroundColor = UIColor.brown
-                  }
-                  image.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-            self.LeftStack.insertArrangedSubview(image, at: counter)
-          } else if (counter > 1) && (counter < self.parkingSpaces.count) {
-              let iconName = self.selecticontodisplay(spot: spot)
-              let image = UIImageView(image: UIImage(named: iconName))
-              if (spot.type == .disabled) {
-    //            this is for disables parking spaces.
-                image.backgroundColor = UIColor.brown
-              }
-              image.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-              self.RightStack.insertArrangedSubview(image, at: (counter-2))
-            }
-          counter = counter + 1
-          print(counter)
+          for (index,parkingSpot) in self.parkingSpaces.enumerated() {
+          switch parkingSpot.type {
+              case .disabled: //imageArray[index].backgroundColor = .systemYellow
+                self.imageArray[index].image = UIImage(named: "disabled_icon.png")
+              case .normal: self.imageArray[index].backgroundColor = .none
+              case .family: self.imageArray[index].backgroundColor = .systemGreen
+          }
+          switch parkingSpot.status {
+              case .occupied: self.imageArray[index].image = UIImage(named: index < 5 ? "car_icon1.png" : "car_icon2.png")
+              case .vacant: self.imageArray[index].image = self.imageArray[index].image
+          }
         }
+          //  WE WILL NEED TO DEINITIALISE THE TIMER WHEN WE MOVE TO ANOTHER AREA WITH: gameTimer?.invalidate()
     }
+}
+}
+      
+
 }
