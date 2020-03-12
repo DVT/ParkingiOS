@@ -244,9 +244,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWN-bf-fLv">
-                                <rect key="frame" x="201" y="592" width="46" height="30"/>
+                                <rect key="frame" x="187" y="592" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Dashboard"/>
+                                <connections>
+                                    <action selector="dashboardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zz-yM-qLM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
