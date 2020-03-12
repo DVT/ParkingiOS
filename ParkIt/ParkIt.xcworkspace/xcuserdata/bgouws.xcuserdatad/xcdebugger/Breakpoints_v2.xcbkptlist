@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
-            landmarkName = "createUser(email:password:licensePlate:firstName:lastName:completion:)"
+            landmarkName = "createUser(email:password:licensePlate:firstName:lastName:cardNumber:csvNumber:expDate:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -64,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "createUser(email:password:licensePlate:firstName:lastName:completion:)"
+            landmarkName = "createUser(email:password:licensePlate:firstName:lastName:cardNumber:csvNumber:expDate:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,7 +80,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "createUser(email:password:licensePlate:firstName:lastName:completion:)"
+            landmarkName = "createUser(email:password:licensePlate:firstName:lastName:cardNumber:csvNumber:expDate:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -112,39 +112,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "saveUserData(licensePlate:firstName:lastName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BDFBE839-AC2F-4865-A373-FA36991F6081"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ParkIt/Firebase/AccountManagement.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "saveUserData(licensePlate:firstName:lastName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4343B785-522D-4BF9-A3B2-7C1015FBE462"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ParkIt/Firebase/AccountManagement.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "saveUserData(licensePlate:firstName:lastName:)"
+            landmarkName = "getUser(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -161,6 +129,54 @@
             startingLineNumber = "28"
             endingLineNumber = "28"
             landmarkName = "signOutUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF6B0CC2-3CA0-4432-BB81-831E023046C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/AccountManagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "757CD907-5F66-4AF1-A648-B0E7749C5EE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/AccountManagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAC1A0BF-48AE-43CE-A080-404E8DDCE401"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/AccountManagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getUser(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
