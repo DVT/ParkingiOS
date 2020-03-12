@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import Firebase
 
 class DashboardViewController: UIViewController, UISearchBarDelegate {
 
@@ -30,6 +31,13 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
             self.searchBar.text = item
         }
         searchBar.delegate = self
+        let myGetData = FirebaseRetrieveData()
+        myGetData.availableParking { (vacant) in
+            self.locationButton.titleLabel?.text = String(vacant)
+        }
+        myGetData.getNumAvailableParking { (vacant) in
+          self.locationButton.titleLabel?.text = String(vacant)
+        }
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         dataFiltered = searchText.isEmpty ? data : data.filter({ (dat) -> Bool in
