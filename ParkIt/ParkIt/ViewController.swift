@@ -29,6 +29,10 @@ class ViewController: UIViewController {
       
       viewController.parkingLevel = ParkingFloor(level: .ground, info: "Info", rate: 17.00, parkingDetails: "Details", parkingSpots: [], stores: "Spar", "Pick 'n Pay")
       present(viewController, animated: true, completion: nil)
+    @IBAction func dashboardButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "DashboardStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC") as UIViewController
+        present(vc, animated: true, completion: nil)
     }
     
   }
