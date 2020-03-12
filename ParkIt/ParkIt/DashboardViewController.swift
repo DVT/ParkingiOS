@@ -19,7 +19,6 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationButton.isHidden = true
        dataFiltered = data
 
         dropButton.anchorView = searchBar
@@ -28,9 +27,7 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
         dropButton.direction = .bottom
 
         dropButton.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)") //Selected item: code at index: 0
             self.searchBar.text = item
-            self.locationButton.isHidden = false
         }
         searchBar.delegate = self
     }
