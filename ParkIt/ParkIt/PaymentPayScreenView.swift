@@ -23,6 +23,7 @@ class PaymentPayScreenView: UIViewController {
     @IBOutlet weak var stackCardNumber: UIStackView!
     @IBOutlet weak var lblQRCodeToExit: UILabel!
     @IBOutlet weak var lblQRCode: UILabel!
+    @IBOutlet weak var lblThankYou: UILabel!
     
     var hour: Int?
     var rate: Double?
@@ -34,9 +35,11 @@ class PaymentPayScreenView: UIViewController {
        lblQRCodeToExit.isHidden = false
        lblQRCode.isEnabled = true
        lblQRCode.isHidden = false
+        lblThankYou.isEnabled = true
+        lblThankYou.isHidden = false
         
        lblQRCode.text  = randomString(length: 8)
-       sleep(2)
+       sleep(1)
        displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
         
     }
@@ -64,6 +67,8 @@ class PaymentPayScreenView: UIViewController {
         lblQRCodeToExit.isHidden = true
         lblQRCode.isEnabled = false
         lblQRCode.isHidden = true
+        lblThankYou.isEnabled = false
+        lblThankYou.isHidden = true
         var accountObj = AccountManagement()
         accountObj.signInUser(email: "brandongouws100@gmail.com", password: "happydays") { (success) in
             if success {
