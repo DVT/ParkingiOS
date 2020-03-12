@@ -11,6 +11,7 @@ import DropDown
 
 class DashboardViewController: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     var data: [String] = ["Rosebank Mall"]
     var dataFiltered: [String] = []
@@ -18,7 +19,6 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
        dataFiltered = data
 
         dropButton.anchorView = searchBar
@@ -27,7 +27,6 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
         dropButton.direction = .bottom
 
         dropButton.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)") //Selected item: code at index: 0
             self.searchBar.text = item
         }
         searchBar.delegate = self

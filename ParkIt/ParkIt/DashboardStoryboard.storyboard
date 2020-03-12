@@ -18,38 +18,65 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="mqV-bs-yUB">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-5m-R2b">
-                                <rect key="frame" x="0.0" y="84" width="414" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uW-3p-QFv">
-                                <rect key="frame" x="105" y="297" width="80" height="71"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uW-3p-QFv">
+                                <rect key="frame" x="105" y="297" width="71" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="DOh-bN-iZe"/>
+                                    <constraint firstAttribute="width" constant="71" id="DOh-bN-iZe"/>
                                     <constraint firstAttribute="height" constant="71" id="hCp-lc-EEc"/>
                                 </constraints>
-                                <state key="normal" title="7" backgroundImage="locationButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="25"/>
+                                <state key="normal" title="7" backgroundImage="locationButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="locationButtonTapped:" destination="uc2-Lz-ccL" eventType="touchUpInside" id="8SJ-XX-k7Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-YK-Vva">
+                                <rect key="frame" x="301" y="179" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="D6a-Qc-H08"/>
+                                    <constraint firstAttribute="height" constant="71" id="urm-Bj-KmO"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="locationButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKR-ir-ukV">
+                                <rect key="frame" x="249" y="456" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="5gc-lY-Nx4"/>
+                                    <constraint firstAttribute="width" constant="71" id="BgO-md-FHP"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="locationButton"/>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-5m-R2b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Hb4-8V-9y7"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="TgU-YK-Vva" firstAttribute="top" secondItem="lVS-5m-R2b" secondAttribute="bottom" constant="91" id="0on-S6-vKq"/>
+                            <constraint firstItem="TgU-YK-Vva" firstAttribute="leading" secondItem="qbj-xd-EDU" secondAttribute="leading" constant="301" id="1YT-ea-4BA"/>
                             <constraint firstItem="qbj-xd-EDU" firstAttribute="bottom" secondItem="3uW-3p-QFv" secondAttribute="bottom" constant="494" id="FTe-OY-prb"/>
                             <constraint firstItem="mqV-bs-yUB" firstAttribute="top" secondItem="qbj-xd-EDU" secondAttribute="top" id="N4S-ds-SkF"/>
+                            <constraint firstItem="lVS-5m-R2b" firstAttribute="trailing" secondItem="mqV-bs-yUB" secondAttribute="trailing" id="Xko-1F-zc3"/>
                             <constraint firstItem="mqV-bs-yUB" firstAttribute="leading" secondItem="qbj-xd-EDU" secondAttribute="leading" id="chY-cM-ABm"/>
-                            <constraint firstItem="mqV-bs-yUB" firstAttribute="top" secondItem="lVS-5m-R2b" secondAttribute="bottom" constant="-84" id="ey2-zk-VZ5"/>
                             <constraint firstItem="qbj-xd-EDU" firstAttribute="bottom" secondItem="mqV-bs-yUB" secondAttribute="bottom" id="f4G-pz-Kd5"/>
-                            <constraint firstItem="lVS-5m-R2b" firstAttribute="leading" secondItem="mqV-bs-yUB" secondAttribute="leading" id="i5k-1a-Kws"/>
-                            <constraint firstItem="lVS-5m-R2b" firstAttribute="top" secondItem="qbj-xd-EDU" secondAttribute="top" constant="40" id="oIE-S0-xqf"/>
+                            <constraint firstItem="UKR-ir-ukV" firstAttribute="leading" secondItem="qbj-xd-EDU" secondAttribute="leading" constant="249" id="h4q-Ul-drB"/>
+                            <constraint firstItem="lVS-5m-R2b" firstAttribute="leading" secondItem="mqV-bs-yUB" secondAttribute="leading" id="hVy-6f-xYh"/>
+                            <constraint firstItem="lVS-5m-R2b" firstAttribute="top" secondItem="qbj-xd-EDU" secondAttribute="top" id="iP3-Fs-uxm"/>
+                            <constraint firstItem="qbj-xd-EDU" firstAttribute="bottom" secondItem="UKR-ir-ukV" secondAttribute="bottom" constant="335" id="tU8-lq-oZL"/>
                             <constraint firstItem="3uW-3p-QFv" firstAttribute="leading" secondItem="qbj-xd-EDU" secondAttribute="leading" constant="105" id="unZ-Qo-3lG"/>
                             <constraint firstItem="qbj-xd-EDU" firstAttribute="trailing" secondItem="mqV-bs-yUB" secondAttribute="trailing" id="vwe-BT-CDv"/>
-                            <constraint firstItem="lVS-5m-R2b" firstAttribute="trailing" secondItem="mqV-bs-yUB" secondAttribute="trailing" id="wDW-zN-zF5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbj-xd-EDU"/>
                     </view>
                     <connections>
+                        <outlet property="locationButton" destination="3uW-3p-QFv" id="6ra-wA-uif"/>
                         <outlet property="searchBar" destination="lVS-5m-R2b" id="SG5-Va-Mpo"/>
                     </connections>
                 </viewController>
@@ -59,7 +86,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="locationButton" width="512" height="512"/>
-        <image name="map" width="886" height="886"/>
+        <image name="locationButton" width="321" height="500"/>
+        <image name="map" width="1140" height="1704"/>
     </resources>
 </document>
