@@ -51,7 +51,7 @@ class FirebaseRetrieveData {
 
                 let parkingType: ParkingSpotType
                 
-                switch data[2] {
+                switch data[1] {
                 case "D":
                     parkingType = .disabled
                 case "N":
