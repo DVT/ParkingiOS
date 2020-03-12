@@ -73,7 +73,7 @@ class GridUI: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     //    this line runs the runTimedCode function continuously
     runTimedCode()
-    parkTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+    parkTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
   }
   
   @objc func runTimedCode() {
@@ -83,14 +83,14 @@ class GridUI: UIViewController {
         DispatchQueue.main.async {
           for (index,parkingSpot) in self.parkingSpaces.enumerated() {
           switch parkingSpot.type {
-              case .disabled: //imageArray[index].backgroundColor = .systemYellow
+              case .disabled:
                 self.imageArray[index].image = UIImage(named: "disabled_icon.png")
               case .normal: self.imageArray[index].backgroundColor = .none
               case .family: self.imageArray[index].backgroundColor = .systemGreen
           }
           switch parkingSpot.status {
               case .occupied: self.imageArray[index].image = UIImage(named: index < 5 ? "car_icon1.png" : "car_icon2.png")
-              case .vacant: self.imageArray[index].image = self.imageArray[index].image
+              case .vacant: self.imageArray[index].image = nil
           }
         }
           //  WE WILL NEED TO DEINITIALISE THE TIMER WHEN WE MOVE TO ANOTHER AREA WITH: gameTimer?.invalidate()
