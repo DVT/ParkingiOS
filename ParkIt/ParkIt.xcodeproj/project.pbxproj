@@ -19,6 +19,8 @@
 		5A6334C42418BE6F008995E6 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334C32418BE6F008995E6 /* CircularProgressView.swift */; };
 		5A6334C62418C38E008995E6 /* ParkingDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334C52418C38E008995E6 /* ParkingDurationViewController.swift */; };
 		5A6334CA241A2401008995E6 /* ParkingFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334C9241A2401008995E6 /* ParkingFloor.swift */; };
+		5A6334CC241A2902008995E6 /* ParkingStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334CB241A2902008995E6 /* ParkingStatusObserver.swift */; };
+		5A6334CE241A2919008995E6 /* ParkingStatusObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334CD241A2919008995E6 /* ParkingStatusObservable.swift */; };
 		98E7D4892391BACB33528524 /* Pods_ParkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */; };
 		B65F8EE225D8F9696F8304DC /* Pods_ParkIt_ParkItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */; };
 		B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B660E90624174D6200987ED8 /* GoogleService-Info.plist */; };
@@ -68,6 +70,8 @@
 		5A6334C32418BE6F008995E6 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		5A6334C52418C38E008995E6 /* ParkingDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDurationViewController.swift; sourceTree = "<group>"; };
 		5A6334C9241A2401008995E6 /* ParkingFloor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFloor.swift; sourceTree = "<group>"; };
+		5A6334CB241A2902008995E6 /* ParkingStatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingStatusObserver.swift; sourceTree = "<group>"; };
+		5A6334CD241A2919008995E6 /* ParkingStatusObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingStatusObservable.swift; sourceTree = "<group>"; };
 		6C0B24C52C69F79D73A0F932 /* Pods-ParkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt_ParkItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B660E90624174D6200987ED8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				41D50DD32418B93D008D50D6 /* WelcomeBoard.storyboard */,
 				41D50DD52418C13B008D50D6 /* WelcomeViewController.swift */,
 				38C806272418B11000578FCA /* PaymentPayScreenView.swift */,
+				5A6334CB241A2902008995E6 /* ParkingStatusObserver.swift */,
+				5A6334CD241A2919008995E6 /* ParkingStatusObservable.swift */,
 			);
 			path = ParkIt;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				41D50DD62418C13B008D50D6 /* WelcomeViewController.swift in Sources */,
 				375E7BE62417801500536863 /* ColourTheme.swift in Sources */,
 				5A6334C62418C38E008995E6 /* ParkingDurationViewController.swift in Sources */,
+				5A6334CE241A2919008995E6 /* ParkingStatusObservable.swift in Sources */,
 				B660E90A24174F8100987ED8 /* FirebaseRetrieveData.swift in Sources */,
 				4125E5EB2417DD07005358C2 /* User.swift in Sources */,
 				B69BFF99241673A800C77087 /* SceneDelegate.swift in Sources */,
@@ -505,6 +512,7 @@
 				4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */,
 				B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */,
 				4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */,
+				5A6334CC241A2902008995E6 /* ParkingStatusObserver.swift in Sources */,
 				5A6334C42418BE6F008995E6 /* CircularProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

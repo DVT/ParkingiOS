@@ -15,23 +15,28 @@ class ParkingDurationViewController: UIViewController {
   @IBOutlet weak var lblTime: UILabel!
   
   private var circularView: CircularProgressView?
+  private var timer: Timer?
+  var parkingLevel: ParkingFloor?
+  private var runCount = 0
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+      super.viewDidLoad()
 
-      if let view = self.view.viewWithTag(10) {
-        setUpCircularProgressView(in: view, lasting: 90)
-      }
-      
-    }
+    lblCost.text = "R 0.00"
+    lblPlace.text = parkingLevel?.level.rawValue
+    parkingSpotBecameOccupied()
+    
+  }
   
-  private func incrementTime(runCount: Int) {
+  private func incrementTime() {
     
     let minutes = runCount % 60
     let hours = Int(floor(Double(runCount)/60.0))
     
     let labelContent = "\(hours):\(minutes)"
     lblTime.text = labelContent
+    
+    updateCost()
     
   }
   
@@ -52,24 +57,62 @@ class ParkingDurationViewController: UIViewController {
     circularView.center = parentView.center
     circularView.resetWhenDone = true
     
-    var runCount = 0
+    runCount = 0
     
-    let _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+    timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
       
-      if runCount >= 120 {
+      guard let self = self else {
+        return
+      }
+      
+      if self.runCount >= 120 {
         timer.invalidate()
         return
       }
       
       self.circularView?.addToProgress(add: (1/60), duration: 1.0)
       
-      runCount += 1
+      self.runCount += 1
       
-      self.incrementTime(runCount: runCount)
-      
-      
+      self.incrementTime()
       
     }
+    
+  }
+  
+  private func updateCost() {
+    
+    let hours = floor(Double(runCount)/60)
+    
+    guard hours >= 1 else {
+      return
+    }
+    
+    let costContent = "R\(hours * (parkingLevel?.rate ?? 1.00))"
+    
+    lblCost.text = costContent
+    
+  }
+  
+}
+
+extension ParkingDurationViewController: ParkingStatusObserver {
+  
+  func parkingSpotBecameOccupied() {
+    
+    if let view = self.view.viewWithTag(10) {
+      setUpCircularProgressView(in: view, lasting: 90)
+    }
+    
+  }
+  
+  func parkingSpotBecameUnoccupied() {
+    
+    timer?.invalidate()
+    let minutes = runCount % 60
+    let hours = Int(floor(Double(runCount)/60.0))
+    
+    
     
   }
   

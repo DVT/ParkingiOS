@@ -23,8 +23,13 @@ class ViewController: UIViewController {
   @IBAction func btnParkingDuration(_ sender: Any) {
     
     let storyboard = UIStoryboard(name: "ParkingDuration", bundle: nil)
-    let vc = storyboard.instantiateViewController(withIdentifier: "ParkingDurationViewController") as UIViewController
-    present(vc, animated: true, completion: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "ParkingDurationViewController") as? ParkingDurationViewController
+    
+    if let viewController = vc {
+      
+      viewController.parkingLevel = ParkingFloor(level: .ground, info: "Info", rate: 17.00, parkingDetails: "Details", parkingSpots: [], stores: "Spar", "Pick 'n Pay")
+      present(viewController, animated: true, completion: nil)
+    }
     
   }
   
