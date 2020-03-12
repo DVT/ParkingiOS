@@ -31,6 +31,8 @@
 		B69BFFAE241673AA00C77087 /* ParkItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69BFFAD241673AA00C77087 /* ParkItTests.swift */; };
 		B69BFFB9241673AA00C77087 /* ParkItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69BFFB8241673AA00C77087 /* ParkItUITests.swift */; };
 		B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD9AB2417809E00E443AA /* AccountManagement.swift */; };
+		D3D087C4241A48420067B2B4 /* PopoverView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D087C3241A48420067B2B4 /* PopoverView.storyboard */; };
+		D3D087C6241A5A260067B2B4 /* ParkingPopoverViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D087C5241A5A260067B2B4 /* ParkingPopoverViewcontroller.swift */; };
 		D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF5666241767F7009FA4B7 /* GridUI.swift */; };
 		D3EF566924176A90009FA4B7 /* GridStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		B6ADD9AB2417809E00E443AA /* AccountManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagement.swift; sourceTree = "<group>"; };
 		BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D087C3241A48420067B2B4 /* PopoverView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopoverView.storyboard; sourceTree = "<group>"; };
+		D3D087C5241A5A260067B2B4 /* ParkingPopoverViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingPopoverViewcontroller.swift; sourceTree = "<group>"; };
 		D3EF5666241767F7009FA4B7 /* GridUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUI.swift; sourceTree = "<group>"; };
 		D3EF566824176A90009FA4B7 /* GridStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridStoryboard.storyboard; sourceTree = "<group>"; };
 		D9EDB802AB654BDA363BCE5D /* Pods-ParkIt-ParkItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt-ParkItUITests.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt-ParkItUITests/Pods-ParkIt-ParkItUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				375E7BE424177E4900536863 /* Colour */,
 				B660E90824174F1900987ED8 /* Firebase */,
 				B660E90624174D6200987ED8 /* GoogleService-Info.plist */,
+				D3D087C3241A48420067B2B4 /* PopoverView.storyboard */,
+				D3D087C5241A5A260067B2B4 /* ParkingPopoverViewcontroller.swift */,
 				B69BFF96241673A800C77087 /* AppDelegate.swift */,
 				B69BFF98241673A800C77087 /* SceneDelegate.swift */,
 				B69BFF9A241673A800C77087 /* ViewController.swift */,
@@ -358,6 +364,7 @@
 				B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */,
 				385D2AA2241A2B6D0004FAE9 /* PaymentStoryboard.storyboard in Resources */,
 				B69BFFA0241673A900C77087 /* Assets.xcassets in Resources */,
+				D3D087C4241A48420067B2B4 /* PopoverView.storyboard in Resources */,
 				377A973A241921CA00216C32 /* DashboardStoryboard.storyboard in Resources */,
 				B69BFF9E241673A800C77087 /* Main.storyboard in Resources */,
 				41D50DD42418B93D008D50D6 /* WelcomeBoard.storyboard in Resources */,
@@ -500,6 +507,7 @@
 				B69BFF99241673A800C77087 /* SceneDelegate.swift in Sources */,
 				D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */,
 				4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */,
+				D3D087C6241A5A260067B2B4 /* ParkingPopoverViewcontroller.swift in Sources */,
 				B6ADD9AC2417809E00E443AA /* AccountManagement.swift in Sources */,
 				4125E5ED2417DD18005358C2 /* ParkingSpot.swift in Sources */,
 			);
