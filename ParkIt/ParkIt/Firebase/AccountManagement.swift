@@ -37,7 +37,6 @@ class AccountManagement {
         let userID = Auth.auth().currentUser?.uid
         ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            print(value!)
             let firstName = value?["firstName"] as? String ?? ""
             let lastName = value?["lastName"] as? String ?? ""
             let licensePlate = value?["licensePlate"] as? String ?? ""
@@ -51,7 +50,7 @@ class AccountManagement {
             print(error.localizedDescription)
         }
     }
-    private func saveUserData(licensePlate: String, firstName: String, lastName: String, cardNumber: String, csvNumber: String, expDate: String) {
+    func saveUserData(licensePlate: String, firstName: String, lastName: String, cardNumber: String, csvNumber: String, expDate: String) {
         let userID = Auth.auth().currentUser?.uid
         let ref = Database.database().reference()
         ref.child("users").child(userID!).setValue(["licensePlate": licensePlate,
