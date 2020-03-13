@@ -205,7 +205,6 @@
 		B69BFF95241673A800C77087 /* ParkIt */ = {
 			isa = PBXGroup;
 			children = (
-				5AA970A3241A7915001F6B5C /* ParkingDuration.storyboard */,
 				4125E5E92417DCCC005358C2 /* CoreClasses */,
 				D3EF56612417658D009FA4B7 /* ParkingGrid */,
 				375E7BE424177E4900536863 /* Colour */,
@@ -221,6 +220,7 @@
 				B69BFFA1241673A900C77087 /* LaunchScreen.storyboard */,
 				B69BFFA4241673A900C77087 /* Info.plist */,
 				41D50DD32418B93D008D50D6 /* WelcomeBoard.storyboard */,
+				5AA970A3241A7915001F6B5C /* ParkingDuration.storyboard */,
 				41D50DD52418C13B008D50D6 /* WelcomeViewController.swift */,
 				38C806272418B11000578FCA /* PaymentPayScreenView.swift */,
 				377A9739241921CA00216C32 /* DashboardStoryboard.storyboard */,
