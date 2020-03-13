@@ -25,6 +25,7 @@ class GridUI: UIViewController {
   @IBOutlet weak var RightStack: UIStackView!
     @IBOutlet weak var lblSelection: UILabel!
     var parkingSpaces = [ParkingSpot]()
+  var parkingfloor: ParkingFloor?
   var parkTimer: Timer?
     
     var imageArray: [UIImageView] = []
@@ -93,19 +94,27 @@ class GridUI: UIViewController {
               case .vacant: self.imageArray[index].image = nil
                 }
             }
-          //  WE WILL NEED TO DEINITIALISE THE TIMER WHEN WE MOVE TO ANOTHER AREA WITH: gameTimer?.invalidate()
         }
     }
 }
       
     @IBAction func btnBook(_ sender: Any) {
         parkTimer?.invalidate()
-//        let storyboard = UIStoryboard(name: "PopoverView", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "ParkingPopoverViewController") as UIViewController
-//        present(vc, animated: true, completion: nil)
-        
-        
+      
+      let storyboard = UIStoryboard(name: "PopoverView", bundle: nil)
+       let vc = storyboard.instantiateViewController(withIdentifier: "ParkingPopoverViewController") as? ParkingPopoverViewController
+       let myFire = FirebaseRetrieveData()
+      myFire.getInformation(parkingSpotLevel: self.parkingSpaces[selectedIndex].level, parkingSpots: parkingSpaces) { (pf) in
+      self.parkingfloor = pf
+        DispatchQueue.main.async {
+          if let viewC = vc {
+            viewC.parkingID = self.selectedIndex
+            viewC.spotdetails = self.parkingfloor
+            self.present(viewC, animated: true, completion: nil)
+          }
+        }
     }
+  }
     
     func helper() {
         for img in imageArray{
