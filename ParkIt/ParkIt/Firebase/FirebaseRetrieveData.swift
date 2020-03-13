@@ -50,6 +50,9 @@ class FirebaseRetrieveData {
                 let data = key.components(separatedBy: ":")
 
                 let parkingType: ParkingSpotType
+                let idString = key.components(separatedBy: ":")
+
+                let parkingID = data[0]
                 
                 switch data[1] {
                 case "D":
@@ -84,7 +87,7 @@ class FirebaseRetrieveData {
                     parkingSpotStatus = .occupied
                 }
                 
-                let parkingSpot = ParkingSpot(level: parkingSpotLevel, type: parkingType, status: parkingSpotStatus)
+                let parkingSpot = ParkingSpot(level: parkingSpotLevel, type: parkingType, status: parkingSpotStatus, parkingID: parkingID)
                 
                 self.parkingSpots.append(parkingSpot)
             }
@@ -103,27 +106,60 @@ class FirebaseRetrieveData {
             }
         }
     }
-    func getInformation(parkingLevel: String) {
-        //let currentUser = AccountManagement()
-        ref.child("Information").child(parkingLevel).observeSingleEvent(of: .value) { (snapshot) in
+    func getInformation(parkingSpotLevel: ParkingSpotLevel, parkingSpots: [ParkingSpot]) {
+        let checkData: ParkingSpotLevel = .levelOne
+        var levelString = ""
+        if parkingSpotLevel == checkData {
+            levelString = "Level1"
+        } else {
+            levelString = "Level0"
+        }
+        ref.child("Information").child(levelString).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let info = value?["Info"] as? String ?? ""
             let parkingDetails = value?["ParkingDetails"] as? String ?? ""
             let rate = value?["Rate"] as? Int ?? 10
             let stores = value?["Stores"] as? String ?? ""
+            
+            let data = stores.components(separatedBy: ",")
+            var allStores = [String]()
+            for store in data {
+                allStores.append(store)
+            }
+            print("Info: \(info) \n Rate: \(rate) \n Parking Details: \(parkingDetails) \n Stores: \(allStores) \n Parking Level: \(parkingSpotLevel) \n Parking Spot Array: \(parkingSpots)")
+            }
+    }
+    func getParkingID(index: Int, parkingSpotLevel: ParkingSpotLevel) {
+        let checkData: ParkingSpotLevel = .levelOne
+        var levelString = ""
+        if parkingSpotLevel == checkData {
+            levelString = "Level1"
+        } else {
+            levelString = "Level0"
+        }
+        getData(parkingLevel: levelString) { (parking) in
+            let parkingID = parking[index].parkingID
+            print(" This is the current parkingID: \(parkingID)")
+            self.setParkingUser(parkingID: parkingID)
         }
     }
-    func setParkingUser() {
-        
+    func setParkingUser(parkingID: String) {
+        let userID = Auth.auth().currentUser?.uid
+        let myFire = AccountManagement()
+        myFire.getUser { (success, currentUser) in
+            let licensePlate = currentUser.licensePlateNum
+            let firstName = currentUser.firstName
+            let lastName = currentUser.lastName
+            let cardNumber = currentUser.bankCard.cardNumber
+            let csvNumber = currentUser.bankCard.csvNumber
+            let expDate = currentUser.bankCard.expiryDate
+            self.ref.child("users").child(userID!).setValue(["licensePlate": licensePlate,
+                                                        "firstName": firstName,
+                                                        "lastName": lastName,
+                                                        "cardNumber": cardNumber,
+                                                        "csvNumber": csvNumber,
+                                                        "expDate": expDate,
+                                                        "parkingID": parkingID])
+        }
     }
-    //Test /////
-//    func getDataTest(parkingLevel: String,completion: @escaping (_ val: [ParkingSpot]) -> ()) {
-//        ref.child("ParkingTest").child(parkingLevel).child("P1").observeSingleEvent(of: .value) { (snapshot) in
-//            let value = snapshot.value as? NSDictionary
-//            let id = value?["id"] as? String ?? ""
-//            let status = value?["Status"] as? String ?? ""
-//            let type = value?["Type"] as? String ?? ""
-//            print("ID: \(id) Status: \(status) Type: \(type)")
-//        }
-//    }
 }

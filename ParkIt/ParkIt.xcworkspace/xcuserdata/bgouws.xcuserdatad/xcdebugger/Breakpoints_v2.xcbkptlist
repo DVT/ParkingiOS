@@ -180,5 +180,197 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "089AB568-44AC-4063-BB8B-93413F6C3F2A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B9DD49F-3E6B-40FC-8EDC-036474EC3130"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/AccountManagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B9DD49F-3E6B-40FC-8EDC-036474EC3130 - f9b28a452fd07637"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ParkIt.AccountManagement.getUser(completion: (Swift.Bool, ParkIt.User) -&gt; ()) -&gt; ()"
+                  moduleName = "ParkIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bgouws/Desktop/ParkItFinal/ParkingiOS/ParkIt/ParkIt/Firebase/AccountManagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "959">
+               </Location>
+               <Location
+                  uuid = "3B9DD49F-3E6B-40FC-8EDC-036474EC3130 - 2c0370b5b8f33301"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in ParkIt.AccountManagement.getUser(completion: (Swift.Bool, ParkIt.User) -&gt; ()) -&gt; ()"
+                  moduleName = "ParkIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bgouws/Desktop/ParkItFinal/ParkingiOS/ParkIt/ParkIt/Firebase/AccountManagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "330">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01C48EB9-8515-49CB-9C4A-9721ECDA44B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01C48EB9-8515-49CB-9C4A-9721ECDA44B8 - e15391aeb5336da1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ParkIt.FirebaseRetrieveData.getInformation(parkingLevel: Swift.String, parkingSpotLevel: ParkIt.ParkingSpotLevel, parkingSpots: Swift.Array&lt;ParkIt.ParkingSpot&gt;) -&gt; ()"
+                  moduleName = "ParkIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bgouws/Desktop/ParkItFinal/ParkingiOS/ParkIt/ParkIt/Firebase/FirebaseRetrieveData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  uuid = "01C48EB9-8515-49CB-9C4A-9721ECDA44B8 - 9216903e4a58657a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in ParkIt.FirebaseRetrieveData.getInformation(parkingLevel: Swift.String, parkingSpotLevel: ParkIt.ParkingSpotLevel, parkingSpots: Swift.Array&lt;ParkIt.ParkingSpot&gt;) -&gt; ()"
+                  moduleName = "ParkIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bgouws/Desktop/ParkItFinal/ParkingiOS/ParkIt/ParkIt/Firebase/FirebaseRetrieveData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "381">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C50AE2B7-0371-41AA-9BDA-0F6A37BBD2E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "649A630B-541E-4651-9E67-F06AC13CC28A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF7C4C77-1A18-4585-B066-660C219837B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E15A7BD-E33F-4403-8CB4-8648AD126A91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B57B6CA3-5937-462C-9928-0E75DE4B65E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParkIt/Firebase/FirebaseRetrieveData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "getInformation(parkingSpotLevel:parkingSpots:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
