@@ -33,9 +33,10 @@ class ParkingPopoverViewController : UIViewController {
     
   }
   
-//  override func viewDidAppear(_ animated: Bool) {
-//    <#code#>
-//  }
-  
+  @IBAction func btnDuration(_ sender: UIButton) {
+    let storyboard = UIStoryboard(name: "ParkingDuration", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "ParkingDurationViewController") as! ParkingDurationViewController
+    present(vc, animated: true, completion: nil)
+  }
   
 }
