@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FrQ-Yv-HkK">
-                                <rect key="frame" x="14" y="75" width="386" height="472"/>
+                                <rect key="frame" x="14" y="75" width="386" height="616"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invoice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua4-TN-9pY">
-                                        <rect key="frame" x="0.0" y="0.0" width="386" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="53.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <color key="textColor" name="Purplish"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMs-TP-e0z">
-                                        <rect key="frame" x="0.0" y="58.5" width="386" height="413.5"/>
+                                        <rect key="frame" x="0.0" y="73.5" width="386" height="542.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qpw-qZ-r5H">
                                                 <rect key="frame" x="0.0" y="0.0" width="386" height="102.5"/>
@@ -192,7 +192,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-VJ-wXD">
-                                                <rect key="frame" x="0.0" y="323" width="386" height="53"/>
+                                                <rect key="frame" x="0.0" y="323" width="386" height="182"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your QRCode:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEc-AT-eUQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="386" height="31.5"/>
@@ -206,10 +206,13 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-0V-ap9">
+                                                        <rect key="frame" x="0.0" y="54" width="386" height="128"/>
+                                                    </imageView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uIf-NJ-eU0">
-                                                <rect key="frame" x="0.0" y="393" width="386" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="522" width="386" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you! = )" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzc-oV-t8C">
                                                         <rect key="frame" x="0.0" y="0.0" width="386" height="20.5"/>
@@ -227,6 +230,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="FrQ-Yv-HkK" firstAttribute="top" secondItem="LEs-vw-ejQ" secondAttribute="top" constant="31" id="6R3-lJ-6Lr"/>
+                            <constraint firstItem="LEs-vw-ejQ" firstAttribute="bottom" secondItem="FrQ-Yv-HkK" secondAttribute="bottom" constant="171" id="We1-Z3-Fex"/>
                             <constraint firstItem="LEs-vw-ejQ" firstAttribute="trailing" secondItem="FrQ-Yv-HkK" secondAttribute="trailing" constant="14" id="aBN-fE-omt"/>
                             <constraint firstItem="FrQ-Yv-HkK" firstAttribute="leading" secondItem="LEs-vw-ejQ" secondAttribute="leading" constant="14" id="cN2-dA-1L9"/>
                         </constraints>
@@ -234,6 +238,7 @@
                     </view>
                     <connections>
                         <outlet property="btnConfirm" destination="V99-BY-CRy" id="FUQ-rW-7z2"/>
+                        <outlet property="imgQRCode" destination="EPQ-0V-ap9" id="EaW-Jr-ehy"/>
                         <outlet property="lblCardNum" destination="nMn-Yk-MxH" id="mlO-HD-XaW"/>
                         <outlet property="lblCustomerName" destination="1ok-JH-8DC" id="TXL-Eh-Zfp"/>
                         <outlet property="lblDetails" destination="o6c-Mj-8Nr" id="6xh-TH-PIC"/>
