@@ -14,7 +14,7 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
-    var data: [String] = ["Rosebank Mall"]
+    var data: [String] = ["Rosebank Mall","Sandton City","Reef Mall","Mutula Square","Eastgate Shopping mall","Mall of the South", "Cresta Shopping Centre", "Glen Shopping Centre","Hyde Park Corner","Killarney Mall","Clearwater Mall"]
     var dataFiltered: [String] = []
     var dropButton = DropDown()
 
