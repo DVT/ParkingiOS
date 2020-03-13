@@ -16,22 +16,26 @@ class ParkingPopoverViewController : UIViewController {
   @IBOutlet weak var PRateLabel: UILabel!
   @IBOutlet weak var PShopsLabel: UILabel!
   public var parkingID: Int?
-  public var spot: ParkingSpot? //this will be assigned when the view is called
+  public var spotdetails: ParkingFloor?
   
   override func viewDidLoad() {
         super.viewDidLoad()
-//    var ids = String(parkingID)
-//    PSpotLabel.text = String(ids)
-    PStatusLabel.text = spot?.status.rawValue
-    PTypeLabel.text = spot?.type.rawValue
-    PLevelLabel.text = spot?.level.rawValue
-    PRateLabel.text = "Loading..."
-    PShopsLabel.text = "Loading..."
+        PSpotLabel.text = "\(parkingID ?? -1)"
+        PStatusLabel.text = spotdetails?.parkingSpots[parkingID!].status.rawValue
+        PTypeLabel.text = spotdetails?.parkingSpots[parkingID!].type.rawValue
+        PLevelLabel.text = spotdetails?.parkingSpots[parkingID!].level.rawValue
+        PRateLabel.text = "\(spotdetails?.rate ?? 0.0)"
+        var shopstores: String = ""
+        for s in (spotdetails?.stores)! {
+          shopstores.append(s + " , ")
+        }
+       PShopsLabel.text = shopstores
+    
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    <#code#>
-  }
+//  override func viewDidAppear(_ animated: Bool) {
+//    <#code#>
+//  }
   
   
 }

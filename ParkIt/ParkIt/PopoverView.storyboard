@@ -107,7 +107,7 @@
                                 <rect key="frame" x="162" y="754" width="90" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PurpleBlue"/>
-                                <state key="normal" title="Book">
+                                <state key="normal" title="Start">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
