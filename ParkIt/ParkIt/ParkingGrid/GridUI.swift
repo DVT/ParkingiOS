@@ -16,14 +16,15 @@ extension ParkingSpot {
             case .levelOne: return 1
             }
         }
+    }
 }
-}
-
 
 class GridUI: UIViewController {
+    var selectedIndex = -1
   @IBOutlet weak var LeftStack: UIStackView!
   @IBOutlet weak var RightStack: UIStackView!
-  var parkingSpaces = [ParkingSpot]()
+    @IBOutlet weak var lblSelection: UILabel!
+    var parkingSpaces = [ParkingSpot]()
   var parkTimer: Timer?
     
     var imageArray: [UIImageView] = []
@@ -40,7 +41,7 @@ class GridUI: UIViewController {
             imageArray.append(imge8)
             imageArray.append(imge9)
     }
-        
+    @IBOutlet weak var actLoader: UIActivityIndicatorView!
     @IBOutlet weak var imge9: UIImageView!
     @IBOutlet weak var imge8: UIImageView!
     @IBOutlet weak var imge7: UIImageView!
@@ -51,29 +52,21 @@ class GridUI: UIViewController {
     @IBOutlet weak var imge2: UIImageView!
     @IBOutlet weak var imge3: UIImageView!
     @IBOutlet weak var imge4: UIImageView!
-  
+  @IBOutlet weak var btnBook: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         _ = self.view
       prepareImageStacks()
+        helper()
+        let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+        actLoader.transform = transfrom
       
   }
-//      this will change when the array reccieved
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .occupied))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .disabled, status: .vacant))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .vacant))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
-//      parkingSpaces.append(ParkingSpot.init(level: .ground, type: .normal, status: .occupied))
 
   override func viewDidAppear(_ animated: Bool) {
     //    this line runs the runTimedCode function continuously
     runTimedCode()
-    parkTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+    parkTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
   }
   
   @objc func runTimedCode() {
@@ -81,7 +74,14 @@ class GridUI: UIViewController {
       myFire.getData(parkingLevel: "Level0") { (parking) in
       self.parkingSpaces = parking
         DispatchQueue.main.async {
+            if (self.actLoader.isAnimating){
+                self.actLoader.hidesWhenStopped = true
+                self.actLoader.stopAnimating()
+            }
           for (index,parkingSpot) in self.parkingSpaces.enumerated() {
+            if ( index == self.selectedIndex) {
+                continue;
+            }
           switch parkingSpot.type {
               case .disabled:
                 self.imageArray[index].image = UIImage(named: "disabled_icon.png")
@@ -91,17 +91,44 @@ class GridUI: UIViewController {
           switch parkingSpot.status {
               case .occupied: self.imageArray[index].image = UIImage(named: index < 5 ? "car_icon1.png" : "car_icon2.png")
               case .vacant: self.imageArray[index].image = nil
-          }
-        }
+                }
+            }
           //  WE WILL NEED TO DEINITIALISE THE TIMER WHEN WE MOVE TO ANOTHER AREA WITH: gameTimer?.invalidate()
+        }
     }
-}
 }
       
     @IBAction func btnBook(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "PopoverView", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ParkingPopoverViewController") as UIViewController
-        present(vc, animated: true, completion: nil)
+        parkTimer?.invalidate()
+//        let storyboard = UIStoryboard(name: "PopoverView", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "ParkingPopoverViewController") as UIViewController
+//        present(vc, animated: true, completion: nil)
+        
+        
     }
+    
+    func helper() {
+        for img in imageArray{
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            img.isUserInteractionEnabled = true
+            img.addGestureRecognizer(tapGestureRecognizer)
+        }
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        let index = imageArray.firstIndex(of: tappedImage)
+        selectedIndex = index ?? -1
+        if (parkingSpaces.count <= selectedIndex || parkingSpaces[selectedIndex].status == ParkingSpotStatus.occupied || parkingSpaces[selectedIndex].status == .occupied) {
+            lblSelection.text = "That parking is not available"
+            return
+        }
+        
+        tappedImage.image = UIImage(named: "car_selected.png")
+        lblSelection.text = "You selected L\(parkingSpaces[selectedIndex].levelView):P\(selectedIndex)"
+        btnBook.isEnabled = true
+        btnBook.backgroundColor = ColourTheme.Palette.primaryPurple
+    }
+    
     
 }
