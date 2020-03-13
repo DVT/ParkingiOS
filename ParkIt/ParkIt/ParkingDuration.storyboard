@@ -12,21 +12,21 @@
         <scene sceneID="fF4-AV-K8M">
             <objects>
                 <viewController storyboardIdentifier="ParkingDurationViewController" id="vJl-dr-27J" customClass="ParkingDurationViewController" customModule="ParkIt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QbR-dl-CkW">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QbR-dl-CkW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="10" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="pLc-aJ-JXg">
+                            <view tag="10" contentMode="top" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLc-aJ-JXg">
                                 <rect key="frame" x="9" y="60" width="385" height="311"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_bird_view" translatesAutoresizingMaskIntoConstraints="NO" id="eCU-Pr-x3T">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="car_bird_view" translatesAutoresizingMaskIntoConstraints="NO" id="eCU-Pr-x3T">
                                         <rect key="frame" x="83" y="136" width="240" height="163"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="163" id="Ozi-xG-1Lk"/>
                                             <constraint firstAttribute="width" constant="240" id="Rtr-iQ-WtZ"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-8y-JRU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Parking Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-8y-JRU">
                                         <rect key="frame" x="88" y="8" width="225.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <color key="textColor" name="Purplish"/>
