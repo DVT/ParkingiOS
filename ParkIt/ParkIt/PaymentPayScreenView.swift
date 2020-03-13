@@ -22,7 +22,6 @@ class PaymentPayScreenView: UIViewController {
     @IBOutlet weak var stackLicensePlate: UIStackView!
     @IBOutlet weak var stackCardNumber: UIStackView!
     @IBOutlet weak var lblQRCodeToExit: UILabel!
-    @IBOutlet weak var lblQRCode: UILabel!
     @IBOutlet weak var lblThankYou: UILabel!
     @IBOutlet weak var imgQRCode: UIImageView!
     
@@ -35,15 +34,11 @@ class PaymentPayScreenView: UIViewController {
 
        lblQRCodeToExit.isEnabled = true
        lblQRCodeToExit.isHidden = false
-       lblQRCode.isEnabled = true
-       lblQRCode.isHidden = false
         lblThankYou.isEnabled = true
         lblThankYou.isHidden = false
-        
-       lblQRCode.text  = randomString(length: 8)
        sleep(1)
        displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
-        let imgQRCodeObj = generateQRCode(from: lblQRCode.text ?? "Error")
+        let imgQRCodeObj = generateQRCode(from: randomString(length: 8) ?? "Error")
         imgQRCode.image = imgQRCodeObj
     }
     
@@ -68,8 +63,6 @@ class PaymentPayScreenView: UIViewController {
         stackCardNumber.isHidden = true
         lblQRCodeToExit.isEnabled = false
         lblQRCodeToExit.isHidden = true
-        lblQRCode.isEnabled = false
-        lblQRCode.isHidden = true
         lblThankYou.isEnabled = false
         lblThankYou.isHidden = true
         var accountObj = AccountManagement()
