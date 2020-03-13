@@ -72,11 +72,6 @@ class ParkingDurationViewController: UIViewController {
         return
       }
       
-      if self.runCount >= 120 {
-        timer.invalidate()
-        return
-      }
-      
       self.circularView?.addToProgress(add: (1/60), duration: 1.0)
       
       self.runCount += 1
