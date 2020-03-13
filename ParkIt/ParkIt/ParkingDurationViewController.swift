@@ -94,6 +94,14 @@ class ParkingDurationViewController: UIViewController {
     
   }
   
+  private func navigateToPaymentStoryboard(minutes: Int, hours: Int) {
+    
+    let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "PaymentPayScreenView") as UIViewController
+    present(vc, animated: true, completion: nil)
+    
+  }
+  
 }
 
 extension ParkingDurationViewController: ParkingStatusObserver {
@@ -112,7 +120,7 @@ extension ParkingDurationViewController: ParkingStatusObserver {
     let minutes = runCount % 60
     let hours = Int(floor(Double(runCount)/60.0))
     
-    
+    navigateToPaymentStoryboard(minutes: minutes, hours: hours)
     
   }
   
