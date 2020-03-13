@@ -54,6 +54,14 @@
                                     <action selector="btnPaymentScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKT-hG-Sxi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgk-qC-163">
+                                <rect key="frame" x="134" y="791" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Payment DUration"/>
+                                <connections>
+                                    <action selector="btnParkingDuration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0k-8B-TRF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
