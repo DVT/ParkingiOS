@@ -41,7 +41,7 @@ class GridUI: UIViewController {
             imageArray.append(imge8)
             imageArray.append(imge9)
     }
-        
+    @IBOutlet weak var actLoader: UIActivityIndicatorView!
     @IBOutlet weak var imge9: UIImageView!
     @IBOutlet weak var imge8: UIImageView!
     @IBOutlet weak var imge7: UIImageView!
@@ -58,6 +58,8 @@ class GridUI: UIViewController {
         _ = self.view
       prepareImageStacks()
         helper()
+        let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+        actLoader.transform = transfrom
       
   }
 
@@ -72,6 +74,10 @@ class GridUI: UIViewController {
       myFire.getData(parkingLevel: "Level0") { (parking) in
       self.parkingSpaces = parking
         DispatchQueue.main.async {
+            if (self.actLoader.isAnimating){
+                self.actLoader.hidesWhenStopped = true
+                self.actLoader.stopAnimating()
+            }
           for (index,parkingSpot) in self.parkingSpaces.enumerated() {
             if ( index == self.selectedIndex) {
                 continue;
@@ -93,9 +99,12 @@ class GridUI: UIViewController {
 }
       
     @IBAction func btnBook(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "PopoverView", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ParkingPopoverViewController") as UIViewController
-        present(vc, animated: true, completion: nil)
+        parkTimer?.invalidate()
+//        let storyboard = UIStoryboard(name: "PopoverView", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "ParkingPopoverViewController") as UIViewController
+//        present(vc, animated: true, completion: nil)
+        
+        
     }
     
     func helper() {
@@ -109,12 +118,13 @@ class GridUI: UIViewController {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         let index = imageArray.firstIndex(of: tappedImage)
-        tappedImage.image = UIImage(named: "car_selected.png")
         selectedIndex = index ?? -1
-        if (parkingSpaces.count < selectedIndex || parkingSpaces[selectedIndex].status == ParkingSpotStatus.occupied) {
+        if (parkingSpaces.count <= selectedIndex || parkingSpaces[selectedIndex].status == ParkingSpotStatus.occupied || parkingSpaces[selectedIndex].status == .occupied) {
             lblSelection.text = "That parking is not available"
             return
         }
+        
+        tappedImage.image = UIImage(named: "car_selected.png")
         lblSelection.text = "You selected L\(parkingSpaces[selectedIndex].levelView):P\(selectedIndex)"
         btnBook.isEnabled = true
         btnBook.backgroundColor = ColourTheme.Palette.primaryPurple

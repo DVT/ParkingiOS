@@ -235,8 +235,9 @@
                                                     <constraint firstAttribute="height" constant="2" id="3Ke-PU-7yA"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nz3-At-fOb">
-                                                <rect key="frame" x="0.0" y="2" width="89" height="93.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nz3-At-fOb">
+                                                <rect key="frame" x="0.0" y="2.5" width="89" height="92.5"/>
+                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDB-qD-R0O">
                                                 <rect key="frame" x="0.0" y="95.5" width="89" height="2"/>
@@ -245,8 +246,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="rQZ-u8-eqO"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f86-4A-nre">
-                                                <rect key="frame" x="0.0" y="97.5" width="89" height="93.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f86-4A-nre">
+                                                <rect key="frame" x="0.0" y="98" width="89" height="92.5"/>
+                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSK-TD-CA2">
                                                 <rect key="frame" x="0.0" y="191" width="89" height="2"/>
@@ -255,8 +257,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="M3A-zt-ahI"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Iv-cD-nvk">
-                                                <rect key="frame" x="0.0" y="193" width="89" height="94"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Iv-cD-nvk">
+                                                <rect key="frame" x="0.0" y="193.5" width="89" height="93"/>
+                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVT-px-Bya">
                                                 <rect key="frame" x="0.0" y="287" width="89" height="2"/>
@@ -265,8 +268,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="Vbn-JC-QBl"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-DD-UBd">
-                                                <rect key="frame" x="0.0" y="289" width="89" height="93.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-DD-UBd">
+                                                <rect key="frame" x="0.0" y="289.5" width="89" height="92.5"/>
+                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6I-9Q-6Qv">
                                                 <rect key="frame" x="0.0" y="382.5" width="89" height="2"/>
@@ -275,8 +279,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="9sK-An-0ko"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qAb-g5-uPf">
-                                                <rect key="frame" x="0.0" y="384.5" width="89" height="93.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qAb-g5-uPf">
+                                                <rect key="frame" x="0.0" y="385" width="89" height="92.5"/>
+                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWb-dG-5cD">
                                                 <rect key="frame" x="0.0" y="478" width="89" height="2"/>
@@ -326,8 +331,9 @@
                                                     <constraint firstAttribute="height" constant="3" id="Xci-1G-2Sb"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDL-QC-ezZ">
-                                                <rect key="frame" x="0.0" y="3" width="89" height="92.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oDL-QC-ezZ">
+                                                <rect key="frame" x="0.0" y="3.5" width="89" height="91.5"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekT-VK-PIb">
                                                 <rect key="frame" x="0.0" y="95.5" width="89" height="3"/>
@@ -336,8 +342,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="FO3-Yj-Rjy"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgJ-HU-LqB">
-                                                <rect key="frame" x="0.0" y="98.5" width="89" height="92.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xgJ-HU-LqB">
+                                                <rect key="frame" x="0.0" y="99" width="89" height="91.5"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3u-yx-sgG">
                                                 <rect key="frame" x="0.0" y="191" width="89" height="3"/>
@@ -346,8 +353,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="nEk-pj-bcu"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="meR-71-ZcJ">
-                                                <rect key="frame" x="0.0" y="194" width="89" height="92"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="meR-71-ZcJ">
+                                                <rect key="frame" x="0.0" y="194.5" width="89" height="91"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGT-7C-lk2">
                                                 <rect key="frame" x="0.0" y="286" width="89" height="3"/>
@@ -356,8 +364,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="pGG-Zq-HI3"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrZ-o2-pWq">
-                                                <rect key="frame" x="0.0" y="289" width="89" height="92.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hrZ-o2-pWq">
+                                                <rect key="frame" x="0.0" y="289.5" width="89" height="91.5"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fb4-tZ-uRB">
                                                 <rect key="frame" x="0.0" y="381.5" width="89" height="3"/>
@@ -366,8 +375,9 @@
                                                     <constraint firstAttribute="height" constant="5" id="JdC-i1-9Na"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIa-aR-wY6">
-                                                <rect key="frame" x="0.0" y="384.5" width="89" height="92.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tIa-aR-wY6">
+                                                <rect key="frame" x="0.0" y="385" width="89" height="91.5"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbj-p4-7Lm">
                                                 <rect key="frame" x="0.0" y="477" width="89" height="3"/>
@@ -404,17 +414,39 @@
                                     <constraint firstItem="0ZN-2M-wnU" firstAttribute="leading" secondItem="m3R-AW-2jQ" secondAttribute="leading" constant="20" symbolic="YES" id="t1f-dJ-1lW"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l2d-Ww-UOg">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l2d-Ww-UOg">
                                 <rect key="frame" x="129" y="214" width="156" height="500"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W8G-Jh-ino">
-                                        <rect key="frame" x="30" y="9" width="38" height="482"/>
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xF-ojA">
-                                        <rect key="frame" x="88" y="9" width="38" height="482"/>
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0yG-D3-3d2">
+                                        <rect key="frame" x="30" y="8" width="96" height="148"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W8G-Jh-ino">
+                                                <rect key="frame" x="0.0" y="1" width="38" height="146"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xF-ojA">
+                                                <rect key="frame" x="58" y="1" width="38" height="146"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-3I-TMI">
+                                        <rect key="frame" x="30" y="176" width="96" height="148"/>
+                                        <color key="tintColor" name="PurpleBlue"/>
+                                    </activityIndicatorView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-Vz-gJJ">
+                                        <rect key="frame" x="30" y="344" width="96" height="148"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rJO-gg-60t">
+                                                <rect key="frame" x="0.0" y="1" width="38" height="146"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ht-Xk-Wnd">
+                                                <rect key="frame" x="58" y="1" width="38" height="146"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="30" bottom="8" right="30"/>
                             </stackView>
@@ -470,6 +502,7 @@
                         <viewLayoutGuide key="safeArea" id="kXq-XW-PqJ"/>
                     </view>
                     <connections>
+                        <outlet property="actLoader" destination="3aU-3I-TMI" id="Cea-Bt-KfU"/>
                         <outlet property="btnBook" destination="uLg-Ac-If5" id="XvL-Ny-dCb"/>
                         <outlet property="imge0" destination="nz3-At-fOb" id="9U5-FG-mwM"/>
                         <outlet property="imge1" destination="f86-4A-nre" id="Lbq-j8-1wz"/>
@@ -492,6 +525,7 @@
     <resources>
         <image name="arrow.down" catalog="system" width="60" height="64"/>
         <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="slash.circle" catalog="system" width="64" height="60"/>
         <image name="star" catalog="system" width="64" height="58"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="star.lefthalf.fill" catalog="system" width="64" height="58"/>
