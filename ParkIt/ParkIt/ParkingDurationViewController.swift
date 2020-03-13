@@ -14,6 +14,7 @@ class ParkingDurationViewController: UIViewController {
   @IBOutlet weak var lblCost: UILabel!
   @IBOutlet weak var lblTime: UILabel!
   
+  
   private var circularView: CircularProgressView?
   private var timer: Timer?
   var parkingLevel: ParkingFloor?
@@ -25,6 +26,12 @@ class ParkingDurationViewController: UIViewController {
     lblCost.text = "R 0.00"
     lblPlace.text = parkingLevel?.level.rawValue
     parkingSpotBecameOccupied()
+    
+  }
+  
+  @IBAction func btnDonePressed(_ sender: Any) {
+    
+    parkingSpotBecameUnoccupied()
     
   }
   
