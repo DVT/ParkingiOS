@@ -55,13 +55,6 @@ class ViewController: UIViewController {
             } else {
                 print("Unsuccessful Sign in")
             }
-            let myData = FirebaseRetrieveData()
-            myData.getData(parkingLevel: "Level1") { (parking) in
-                let spotPicked = parking[0].level
-                myData.getInformation(parkingSpotLevel: spotPicked, parkingSpots: parking)
-                myData.getParkingID(index: 1, parkingSpotLevel: parking[1].level)
-            }
-            
         }
     }
 }

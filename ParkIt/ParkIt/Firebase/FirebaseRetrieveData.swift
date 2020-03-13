@@ -106,7 +106,7 @@ class FirebaseRetrieveData {
             }
         }
     }
-    func getInformation(parkingSpotLevel: ParkingSpotLevel, parkingSpots: [ParkingSpot]) {
+    func getInformation(parkingSpotLevel: ParkingSpotLevel, parkingSpots: [ParkingSpot], completion: @escaping (_ val: ParkingFloor) -> ()) {
         let checkData: ParkingSpotLevel = .levelOne
         var levelString = ""
         if parkingSpotLevel == checkData {
@@ -126,7 +126,8 @@ class FirebaseRetrieveData {
             for store in data {
                 allStores.append(store)
             }
-            print("Info: \(info) \n Rate: \(rate) \n Parking Details: \(parkingDetails) \n Stores: \(allStores) \n Parking Level: \(parkingSpotLevel) \n Parking Spot Array: \(parkingSpots)")
+            let parkingFloor = ParkingFloor(level: parkingSpotLevel, info: info, rate: Double(rate), parkingDetails: parkingDetails, stores: allStores, parkingSpots: parkingSpots)
+            completion(parkingFloor)
             }
     }
     func getParkingID(index: Int, parkingSpotLevel: ParkingSpotLevel) {
