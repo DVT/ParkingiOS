@@ -27,4 +27,5 @@ struct ParkingSpot {
     var level: ParkingSpotLevel
     var type: ParkingSpotType
     var status: ParkingSpotStatus
+    var parkingID: String
 }

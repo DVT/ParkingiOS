@@ -17,7 +17,14 @@
 		4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5EE2417DD36005358C2 /* BankCard.swift */; };
 		41D50DD42418B93D008D50D6 /* WelcomeBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D50DD32418B93D008D50D6 /* WelcomeBoard.storyboard */; };
 		41D50DD62418C13B008D50D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50DD52418C13B008D50D6 /* WelcomeViewController.swift */; };
+		41D50DD8241A5ECA008D50D6 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50DD7241A5ECA008D50D6 /* PopoverViewController.swift */; };
 		558C49BF0D900BCB150AE2D8 /* Pods_ParkItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB392B6A81BC40D8060A2BEC /* Pods_ParkItTests.framework */; };
+		5AA970A4241A7915001F6B5C /* ParkingDuration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970A3241A7915001F6B5C /* ParkingDuration.storyboard */; };
+		5AA970A6241A7931001F6B5C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970A5241A7931001F6B5C /* CircularProgressView.swift */; };
+		5AA970A8241A795D001F6B5C /* ParkingDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970A7241A795D001F6B5C /* ParkingDurationViewController.swift */; };
+		5AA970AA241A797D001F6B5C /* ParkingFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970A9241A797D001F6B5C /* ParkingFloor.swift */; };
+		5AA970AC241A79AF001F6B5C /* ParkingStatusObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970AB241A79AF001F6B5C /* ParkingStatusObservable.swift */; };
+		5AA970AE241A79C7001F6B5C /* ParkingStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970AD241A79C7001F6B5C /* ParkingStatusObserver.swift */; };
 		98E7D4892391BACB33528524 /* Pods_ParkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8B0E1233A8DEEFC4401CA /* Pods_ParkIt.framework */; };
 		B65F8EE225D8F9696F8304DC /* Pods_ParkIt_ParkItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */; };
 		B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B660E90624174D6200987ED8 /* GoogleService-Info.plist */; };
@@ -68,6 +75,13 @@
 		4125E5EE2417DD36005358C2 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 		41D50DD32418B93D008D50D6 /* WelcomeBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBoard.storyboard; sourceTree = "<group>"; };
 		41D50DD52418C13B008D50D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		41D50DD7241A5ECA008D50D6 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		5AA970A3241A7915001F6B5C /* ParkingDuration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParkingDuration.storyboard; sourceTree = "<group>"; };
+		5AA970A5241A7931001F6B5C /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		5AA970A7241A795D001F6B5C /* ParkingDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDurationViewController.swift; sourceTree = "<group>"; };
+		5AA970A9241A797D001F6B5C /* ParkingFloor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFloor.swift; sourceTree = "<group>"; };
+		5AA970AB241A79AF001F6B5C /* ParkingStatusObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingStatusObservable.swift; sourceTree = "<group>"; };
+		5AA970AD241A79C7001F6B5C /* ParkingStatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingStatusObserver.swift; sourceTree = "<group>"; };
 		6C0B24C52C69F79D73A0F932 /* Pods-ParkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkIt.debug.xcconfig"; path = "Target Support Files/Pods-ParkIt/Pods-ParkIt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C771DE96B332CA66553242 /* Pods_ParkIt_ParkItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkIt_ParkItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B660E90624174D6200987ED8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -139,6 +153,7 @@
 				4125E5EA2417DD07005358C2 /* User.swift */,
 				4125E5EC2417DD18005358C2 /* ParkingSpot.swift */,
 				4125E5EE2417DD36005358C2 /* BankCard.swift */,
+				5AA970A9241A797D001F6B5C /* ParkingFloor.swift */,
 			);
 			path = CoreClasses;
 			sourceTree = "<group>";
@@ -190,6 +205,7 @@
 		B69BFF95241673A800C77087 /* ParkIt */ = {
 			isa = PBXGroup;
 			children = (
+				5AA970A3241A7915001F6B5C /* ParkingDuration.storyboard */,
 				4125E5E92417DCCC005358C2 /* CoreClasses */,
 				D3EF56612417658D009FA4B7 /* ParkingGrid */,
 				375E7BE424177E4900536863 /* Colour */,
@@ -210,6 +226,11 @@
 				377A9739241921CA00216C32 /* DashboardStoryboard.storyboard */,
 				377A973B241921F700216C32 /* DashboardViewController.swift */,
 				385D2AA1241A2B6D0004FAE9 /* PaymentStoryboard.storyboard */,
+				41D50DD7241A5ECA008D50D6 /* PopoverViewController.swift */,
+				5AA970A5241A7931001F6B5C /* CircularProgressView.swift */,
+				5AA970A7241A795D001F6B5C /* ParkingDurationViewController.swift */,
+				5AA970AB241A79AF001F6B5C /* ParkingStatusObservable.swift */,
+				5AA970AD241A79C7001F6B5C /* ParkingStatusObserver.swift */,
 			);
 			path = ParkIt;
 			sourceTree = "<group>";
@@ -361,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69BFFA3241673A900C77087 /* LaunchScreen.storyboard in Resources */,
+				5AA970A4241A7915001F6B5C /* ParkingDuration.storyboard in Resources */,
 				B660E90724174D6300987ED8 /* GoogleService-Info.plist in Resources */,
 				385D2AA2241A2B6D0004FAE9 /* PaymentStoryboard.storyboard in Resources */,
 				B69BFFA0241673A900C77087 /* Assets.xcassets in Resources */,
@@ -497,14 +519,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69BFF9B241673A800C77087 /* ViewController.swift in Sources */,
+				5AA970AC241A79AF001F6B5C /* ParkingStatusObservable.swift in Sources */,
+				5AA970AA241A797D001F6B5C /* ParkingFloor.swift in Sources */,
 				38C806282418B11000578FCA /* PaymentPayScreenView.swift in Sources */,
+				5AA970A8241A795D001F6B5C /* ParkingDurationViewController.swift in Sources */,
 				B69BFF97241673A800C77087 /* AppDelegate.swift in Sources */,
 				41D50DD62418C13B008D50D6 /* WelcomeViewController.swift in Sources */,
 				375E7BE62417801500536863 /* ColourTheme.swift in Sources */,
 				B660E90A24174F8100987ED8 /* FirebaseRetrieveData.swift in Sources */,
 				4125E5EB2417DD07005358C2 /* User.swift in Sources */,
+				5AA970AE241A79C7001F6B5C /* ParkingStatusObserver.swift in Sources */,
+				41D50DD8241A5ECA008D50D6 /* PopoverViewController.swift in Sources */,
 				377A973C241921F700216C32 /* DashboardViewController.swift in Sources */,
 				B69BFF99241673A800C77087 /* SceneDelegate.swift in Sources */,
+				5AA970A6241A7931001F6B5C /* CircularProgressView.swift in Sources */,
 				D3EF5667241767F7009FA4B7 /* GridUI.swift in Sources */,
 				4125E5EF2417DD36005358C2 /* BankCard.swift in Sources */,
 				D3D087C6241A5A260067B2B4 /* ParkingPopoverViewcontroller.swift in Sources */,
