@@ -24,6 +24,8 @@ class PaymentPayScreenView: UIViewController {
     @IBOutlet weak var lblQRCodeToExit: UILabel!
     @IBOutlet weak var lblQRCode: UILabel!
     @IBOutlet weak var lblThankYou: UILabel!
+    @IBOutlet weak var imgQRCode: UIImageView!
+    
     
     var hour: Int?
     var rate: Double?
@@ -41,7 +43,8 @@ class PaymentPayScreenView: UIViewController {
        lblQRCode.text  = randomString(length: 8)
        sleep(1)
        displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
-        
+        let imgQRCodeObj = generateQRCode(from: lblQRCode.text ?? "Error")
+        imgQRCode.image = imgQRCodeObj
     }
     
     @IBAction func btnMakePayment(_ sender: UIButton) {
@@ -125,6 +128,20 @@ class PaymentPayScreenView: UIViewController {
     func randomParkingNumber(length: Int) -> String {
       let letters = "0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii)
+
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 3, y: 3)
+
+            if let output = filter.outputImage?.transformed(by: transform) {
+                return UIImage(ciImage: output)
+            }
+        }
+
+        return nil
     }
     
     
