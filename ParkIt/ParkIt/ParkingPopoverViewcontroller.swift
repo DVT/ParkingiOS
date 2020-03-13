@@ -25,13 +25,13 @@ class ParkingPopoverViewController : UIViewController {
     PStatusLabel.text = spot?.status.rawValue
     PTypeLabel.text = spot?.type.rawValue
     PLevelLabel.text = spot?.level.rawValue
-//    rate abd shops nearby to do still
-    
-    
-    
-      
+    PRateLabel.text = "Loading..."
+    PShopsLabel.text = "Loading..."
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    <#code#>
+  }
   
   
 }
