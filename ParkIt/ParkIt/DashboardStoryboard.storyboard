@@ -39,7 +39,9 @@
                                     <constraint firstAttribute="width" constant="50" id="D6a-Qc-H08"/>
                                     <constraint firstAttribute="height" constant="71" id="urm-Bj-KmO"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="locationButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="25"/>
+                                <state key="normal" title="3" backgroundImage="locationButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKR-ir-ukV">
                                 <rect key="frame" x="249" y="456" width="50" height="71"/>
@@ -47,7 +49,11 @@
                                     <constraint firstAttribute="height" constant="71" id="5gc-lY-Nx4"/>
                                     <constraint firstAttribute="width" constant="50" id="BgO-md-FHP"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="locationButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="25"/>
+                                <state key="normal" title="27" backgroundImage="locationButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-5m-R2b">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
