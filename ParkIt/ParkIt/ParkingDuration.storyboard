@@ -32,6 +32,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="94"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="btnDonePressed:" destination="vJl-dr-27J" eventType="touchUpInside" id="3uc-UN-rjZ"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xl3-bz-Vqf">
                                                 <rect key="frame" x="0.0" y="94" width="354" height="94"/>

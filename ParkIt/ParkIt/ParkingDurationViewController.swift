@@ -14,6 +14,7 @@ class ParkingDurationViewController: UIViewController {
   @IBOutlet weak var lblCost: UILabel!
   @IBOutlet weak var lblTime: UILabel!
   
+  
   private var circularView: CircularProgressView?
   private var timer: Timer?
   var parkingLevel: ParkingFloor?
@@ -25,6 +26,12 @@ class ParkingDurationViewController: UIViewController {
     lblCost.text = "R 0.00"
     lblPlace.text = parkingLevel?.level.rawValue
     parkingSpotBecameOccupied()
+    
+  }
+  
+  @IBAction func btnDonePressed(_ sender: Any) {
+    
+    parkingSpotBecameUnoccupied()
     
   }
   
@@ -65,11 +72,6 @@ class ParkingDurationViewController: UIViewController {
         return
       }
       
-      if self.runCount >= 120 {
-        timer.invalidate()
-        return
-      }
-      
       self.circularView?.addToProgress(add: (1/60), duration: 1.0)
       
       self.runCount += 1
@@ -94,6 +96,20 @@ class ParkingDurationViewController: UIViewController {
     
   }
   
+  private func navigateToPaymentStoryboard(rate: Double?, hours: Int) {
+    
+    let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "PaymentPayScreenView") as? PaymentPayScreenView
+    
+    if let viewController = vc {
+      
+      viewController.hour = hours
+      viewController.rate = rate
+      present(viewController, animated: true, completion: nil)
+    }
+    
+  }
+  
 }
 
 extension ParkingDurationViewController: ParkingStatusObserver {
@@ -109,10 +125,9 @@ extension ParkingDurationViewController: ParkingStatusObserver {
   func parkingSpotBecameUnoccupied() {
     
     timer?.invalidate()
-    let minutes = runCount % 60
     let hours = Int(floor(Double(runCount)/60.0))
     
-    
+    navigateToPaymentStoryboard(rate: parkingLevel?.rate, hours: hours)
     
   }
   
