@@ -28,7 +28,7 @@ class PaymentPayScreenView: UIViewController {
     
     var hour: Int?
     var rate: Double?
-    
+    var parkingLevel: ParkingFloor?
     
     @IBAction func btnConfirmPress(_ sender: Any) {
 
@@ -37,7 +37,7 @@ class PaymentPayScreenView: UIViewController {
         lblThankYou.isEnabled = true
         lblThankYou.isHidden = false
        sleep(1)
-       displayDefaultAlert(title: "Success", message: "Your parking has been reserved!")
+       displayDefaultAlert(title: "Payment Successful", message: "Thank you for using our services! = )")
         let imgQRCodeObj = generateQRCode(from: randomString(length: 8) ?? "Error")
         imgQRCode.image = imgQRCodeObj
     }
@@ -77,10 +77,10 @@ class PaymentPayScreenView: UIViewController {
                         return index < conditionIndex ? "#" : element
                     })
                     print("Masked Name: ", maskedName)//testing
-                    
                      var fullname = "\(user.firstName)  \(user.lastName)"
                      self.lblCustomerName.text = fullname
-                    self.lblParkingNum.text = String(self.randomParkingNumber(length: 10))
+                    self.lblParkingNum.text = self.parkingLevel?.level.rawValue
+                        //String(self.randomParkingNumber(length: 10))
                     self.lblHourlyRate.text = "\(self.rate ?? 0.0)"
                     self.lblDuration.text = "\(self.hour ?? 0)"
                     self.lblLicensePlate.text = user.licensePlateNum
