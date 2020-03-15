@@ -100,7 +100,7 @@ class ParkingDurationViewController: UIViewController {
     
     let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
     let vc = storyboard.instantiateViewController(withIdentifier: "PaymentPayScreenView") as? PaymentPayScreenView
-    
+    vc?.modalPresentationStyle = .fullScreen
     if let viewController = vc {
       
       viewController.hour = hours
