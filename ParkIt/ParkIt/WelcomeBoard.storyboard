@@ -63,6 +63,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnNextClick:" destination="8No-aG-kI7" eventType="touchUpInside" id="r5L-pD-poj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="PurpleBlue"/>
