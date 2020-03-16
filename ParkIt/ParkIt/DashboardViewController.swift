@@ -71,6 +71,7 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
     @IBAction func locationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "GridStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "GridUI") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
 }

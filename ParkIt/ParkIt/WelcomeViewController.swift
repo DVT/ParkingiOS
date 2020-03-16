@@ -23,5 +23,10 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+  @IBAction func btnNextClick(_ sender: Any) {
+    let storyboard = UIStoryboard(name: "DashboardStoryboard", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC") as UIViewController
+    present(vc, animated: true, completion: nil)
+  }
+  
 }
