@@ -41,20 +41,19 @@ class FirebaseRetrieveData {
         }
     }
     // // // // / // // // // / // // // // // // // // develop version
-    func getCurrentState(completion: @escaping (_ val: Int) -> ()) {
-        ref.child("ParkingTest").child("Level0").child("P1").observeSingleEvent(of: .value) { (snapshot) in
+    func getCurrentState(parkingLevel: String, parkingNum: String, completion: @escaping (_ val: Int) -> ()) {
+        ref.child("ParkingTest").child(parkingLevel).child(parkingNum).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let state = value?["Status"] as? Int ?? 10000
             completion(state)
         }
     }
     
-    func getParkingState(parkingLevel: String, parkingNum: String,completion: @escaping (_ val: String) -> ()) {
+    func getParkingState(parkingLevel: String, parkingNum: String, completion: @escaping (_ val: String) -> ()) {
         ref.child("ParkingTest").child(parkingLevel).child(parkingNum).observe( .childChanged) { (snapshot) in
-            self.getCurrentState { (data) in
+            self.getCurrentState(parkingLevel: parkingLevel, parkingNum: parkingNum){ (data) in
                 completion(String(data))
             }
-            completion("Data")
         }
     }
     

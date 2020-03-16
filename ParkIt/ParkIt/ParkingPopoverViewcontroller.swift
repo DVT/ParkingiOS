@@ -37,6 +37,8 @@ class ParkingPopoverViewController : UIViewController {
     let storyboard = UIStoryboard(name: "ParkingDuration", bundle: nil)
     let vc = storyboard.instantiateViewController(withIdentifier: "ParkingDurationViewController") as! ParkingDurationViewController
     vc.modalPresentationStyle = .fullScreen
+    vc.currentSpotID = parkingID
+    vc.parkingLevel = spotdetails
     present(vc, animated: true, completion: nil)
   }
   
