@@ -8,6 +8,7 @@ target 'ParkIt' do
   # Pods for ParkIt
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+pod 'DropDown'
 
   target 'ParkItTests' do
     inherit! :search_paths
