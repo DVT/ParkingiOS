@@ -31,13 +31,16 @@ class DashboardViewController: UIViewController, UISearchBarDelegate {
             self.searchBar.text = item
         }
         searchBar.delegate = self
+        
+        //Firebase
         let myGetData = FirebaseRetrieveData()
-        myGetData.availableParking { (vacant) in
+        myGetData.getNumAvailableParkingTest { (vacant) in
             self.locationButton.titleLabel?.text = String(vacant)
         }
-        myGetData.getNumAvailableParking { (vacant) in
-          self.locationButton.titleLabel?.text = String(vacant)
+        myGetData.availableParkingTest { (vacant) in
+            self.locationButton.titleLabel?.text = String(vacant)
         }
+        //Firebase
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         dataFiltered = searchText.isEmpty ? data : data.filter({ (dat) -> Bool in

@@ -40,7 +40,108 @@ class FirebaseRetrieveData {
             }
         }
     }
-    func getData(parkingLevel: String,completion: @escaping (_ val: [ParkingSpot]) -> ()) {
+    // // // // / // // // // / // // // // // // // // develop version
+    func getCurrentState(parkingLevel: String, parkingNum: String, completion: @escaping (_ val: Int) -> ()) {
+        ref.child("ParkingTest").child(parkingLevel).child(parkingNum).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let state = value?["Status"] as? Int ?? 10000
+            completion(state)
+        }
+    }
+    
+    func getParkingState(parkingLevel: String, parkingNum: String, completion: @escaping (_ val: String) -> ()) {
+        ref.child("ParkingTest").child(parkingLevel).child(parkingNum).observe( .childChanged) { (snapshot) in
+            self.getCurrentState(parkingLevel: parkingLevel, parkingNum: parkingNum){ (data) in
+                completion(String(data))
+            }
+        }
+    }
+    
+    func availableParkingTest(completion: @escaping (_ val: Int) -> ()) {
+        ref.child("ParkingTest").child("Level0").observe(.childChanged) { (snapshot) in
+            self.getNumAvailableParkingTest { (vacant) in
+                completion(vacant)
+            }
+        }
+        ref.child("ParkingTest").child("Level1").observe(.childChanged) { (snapshot) in
+            self.getNumAvailableParkingTest { (vacant) in
+                completion(vacant)
+            }
+        }
+    }
+    func getNumAvailableParkingTest(completion: @escaping (_ val: Int) -> ()) {
+        self.getLevelCount { (count) in
+            var vacantTotal = 0
+            for child in 0 ... count-1 {
+                let parkingLevel: String = "Level\(child)"
+                for parkings in 1 ... 5 {
+                    self.ref.child("ParkingTest").child(parkingLevel).child("P\(parkings)").observeSingleEvent(of: .value) { (snapshot) in
+                        let value = snapshot.value as? NSDictionary
+                        let state = value?["Status"] as? Int ?? 1000
+                        //Count up avaliable parkings
+                        if state == 0 {
+                            vacantTotal += 1
+                        }
+                        completion(vacantTotal)
+                    }
+                }
+                
+            }
+        }
+    }
+    func getData(parkingLevel: String, _ completion: @escaping (_ val: [ParkingSpot]) -> ()) {
+        ref.child("ParkingTest").child(parkingLevel).observeSingleEvent(of: .value) { (snapshot) in
+            for item in 1...5 {
+                self.ref.child("ParkingTest").child(parkingLevel).child("P\(item)").observeSingleEvent(of: .value) { (snapshot) in
+                    let value =  snapshot.value as? NSDictionary
+                    let ID = value?["ID"] as?  Int ?? 1000
+                    let Status = value?["Status"] as?  Int ?? 1000
+                    let Type = value?["Type"] as?  String ?? ""
+                    let parkingType: ParkingSpotType
+                    switch Type {
+                    case "Disability":
+                        parkingType = .disabled
+                    case "Normal":
+                        parkingType = .normal
+                    case "Family":
+                        parkingType = .family
+                    default:
+                        parkingType = .normal
+                    }
+                    
+                    let parkingSpotLevel: ParkingSpotLevel
+                    
+                    switch parkingLevel {
+                    case "Level0":
+                        parkingSpotLevel = .ground
+                    case "Level1":
+                        parkingSpotLevel = .levelOne
+                    default:
+                        parkingSpotLevel = .ground
+                    }
+                    
+                    let parkingSpotStatus: ParkingSpotStatus
+                    
+                    switch Status {
+                    case 0:
+                        parkingSpotStatus = .vacant
+                    case 1:
+                        parkingSpotStatus = .occupied
+                    default:
+                        parkingSpotStatus = .occupied
+                    }
+                    let parkingSpot = ParkingSpot(level: parkingSpotLevel, type: parkingType, status: parkingSpotStatus, parkingID: String (ID))
+                    self.parkingSpots.append(parkingSpot)
+                    if item >= 5 {
+                        completion(self.parkingSpots)
+                    }
+                }
+            }
+        }
+    }
+    // // // // // // // // // // // // // // // // // // // // // // // //
+    
+    func getDatax(parkingLevel: String,completion: @escaping (_ val: [ParkingSpot]) -> ()) {
         ref.child("Parking").child(parkingLevel).observeSingleEvent(of: .value) { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot

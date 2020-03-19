@@ -18,14 +18,16 @@ class ParkingDurationViewController: UIViewController {
   private var circularView: CircularProgressView?
   private var timer: Timer?
   var parkingLevel: ParkingFloor?
+  var currentSpotID: Int?
   private var runCount = 0
+  private let firebaseData: FirebaseRetrieveData = FirebaseRetrieveData()
   
   override func viewDidLoad() {
       super.viewDidLoad()
 
     lblCost.text = "R 0.00"
     lblPlace.text = parkingLevel?.level.rawValue
-    parkingSpotBecameOccupied()
+    setUpFirebaseObserver()
     
   }
   
@@ -106,6 +108,53 @@ class ParkingDurationViewController: UIViewController {
       viewController.hour = hours
       viewController.rate = rate
       present(viewController, animated: true, completion: nil)
+    }
+    
+  }
+  
+  private func setUpFirebaseObserver() {
+    
+    guard let levelEnum = parkingLevel?.level else {
+      return
+    }
+    
+    var level = ""
+    
+    if levelEnum == .ground {
+      level = "Level0"
+    } else {
+      level = "Level1"
+    }
+    
+    guard var currentSpotID = (currentSpotID) else {
+      return
+    }
+    
+    currentSpotID += 1
+    
+    let spotID = "P\(currentSpotID)"
+    
+    firebaseData.getParkingState(parkingLevel: level, parkingNum: spotID) { [weak self] (parkingState) in
+      
+      print(parkingState)
+      
+      guard let self = self else {
+        return
+      }
+      
+      switch parkingState {
+
+      case "0":
+        self.parkingSpotBecameUnoccupied()
+
+      case "1":
+        self.parkingSpotBecameOccupied()
+
+      default:
+        fatalError("Unexpected Parking State")
+
+      }
+      
     }
     
   }
