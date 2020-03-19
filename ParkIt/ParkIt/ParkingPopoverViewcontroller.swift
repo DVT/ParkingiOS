@@ -20,7 +20,7 @@ class ParkingPopoverViewController : UIViewController {
   
   override func viewDidLoad() {
         super.viewDidLoad()
-        PSpotLabel.text = "\(parkingID ?? -1)"
+        PSpotLabel.text = "\((parkingID ?? -1) + 1)"
         PStatusLabel.text = spotdetails?.parkingSpots[parkingID!].status.rawValue
         PTypeLabel.text = spotdetails?.parkingSpots[parkingID!].type.rawValue
         PLevelLabel.text = spotdetails?.parkingSpots[parkingID!].level.rawValue
@@ -36,6 +36,7 @@ class ParkingPopoverViewController : UIViewController {
   @IBAction func btnDuration(_ sender: UIButton) {
     let storyboard = UIStoryboard(name: "ParkingDuration", bundle: nil)
     let vc = storyboard.instantiateViewController(withIdentifier: "ParkingDurationViewController") as! ParkingDurationViewController
+    vc.parkingLevel = spotdetails
     vc.modalPresentationStyle = .fullScreen
     vc.currentSpotID = parkingID
     vc.parkingLevel = spotdetails
